@@ -235,11 +235,11 @@ a:hover { text-decoration: underline; }
   display: grid;
   grid-template-columns: 1fr 380px;
   gap: 0;
-  min-height: calc(100vh - 80px);
+  height: 100vh;
+  overflow: hidden;
 }
 .video-player-wrap {
-  position: sticky;
-  top: 0;
+  position: relative;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -248,9 +248,9 @@ a:hover { text-decoration: underline; }
   overflow: hidden;
 }
 .video-player-wrap video {
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
   height: 100%;
   object-fit: contain;
 }
@@ -696,9 +696,12 @@ a:hover { text-decoration: underline; }
   font-weight: 500;
   backdrop-filter: blur(4px);
   transition: opacity 0.2s, background 0.15s;
+  opacity: 0;
+  pointer-events: none;
 }
+.video-player-wrap:hover .unmute-top { opacity: 1; pointer-events: auto; }
 .unmute-top:hover { background: rgba(0,0,0,0.8); }
-.unmute-top.hidden { opacity: 0; pointer-events: none; }
+.unmute-top.hidden { display: none; }
 
 /* --- SCROLLBAR --- */
 ::-webkit-scrollbar { width: 6px; }
@@ -852,9 +855,17 @@ document.addEventListener('DOMContentLoaded', function() {
 # HTML GENERATORS
 # ============================================================
 
-def html_shell(title: str, desc: str, url: str, body: str, extra_head: str = "", depth: int = 0) -> str:
+def html_shell(title: str, desc: str, url: str, body: str, extra_head: str = "", depth: int = 0, show_nav: bool = True) -> str:
     prefix = "../" * depth if depth else ""
-    vid_prefix = "../" * (depth + 1) if depth else ""
+    nav_html = f"""<nav class="top-nav">
+  <a href="{prefix}index.html" class="logo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+    TikTok Archive
+  </a>
+  <div class="nav-links">
+    <a href="{prefix}index.html">Videos</a>
+  </div>
+</nav>""" if show_nav else ""
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -880,15 +891,7 @@ def html_shell(title: str, desc: str, url: str, body: str, extra_head: str = "",
 {extra_head}
 </head>
 <body>
-<nav class="top-nav">
-  <a href="{prefix}index.html" class="logo">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-    TikTok Archive
-  </a>
-  <div class="nav-links">
-    <a href="{prefix}index.html">Videos</a>
-  </div>
-</nav>
+{nav_html}
 {body}
 <script src="{prefix}js/main.js"></script>
 </body>
@@ -1060,7 +1063,7 @@ def build_video_page(video_data: dict):
 
         view_replies = ""
         if reply_count > 0 and replies_html:
-            view_replies = f'<button class="view-replies-btn" onclick="this.nextElementSibling.style.display=\'block\';this.style.display=\'none\'">View all {reply_count} replies</button>'
+            view_replies = f'<button class="view-replies-btn" onclick="var r=this.nextElementSibling;r.style.display=r.style.display==\'none\'?\'\':\'none\';this.textContent=this.textContent==\'Hide replies\'?\'View all {reply_count} replies\':\'Hide replies\'">View all {reply_count} replies</button>'
 
         comments_html += f"""
 <div class="comment">
@@ -1072,7 +1075,7 @@ def build_video_page(video_data: dict):
       <span>{c_likes} likes</span>
     </div>
     {view_replies}
-    {f'<div class="replies" style="display:none">{replies_html}</div>' if replies_html else ''}
+    {f'<div class="replies">{replies_html}</div>' if replies_html else ''}
   </div>
 </div>"""
 
@@ -1131,7 +1134,7 @@ def build_video_page(video_data: dict):
     body = f"""
 <div class="video-page">
   <div class="video-player-wrap" id="playerWrap">
-    <video id="tiktokPlayer" autoplay playsinline preload="metadata" poster="{esc(thumb)}">
+    <video id="tiktokPlayer" autoplay loop playsinline preload="metadata" poster="{esc(thumb)}">
       <source src="{esc(video_src_local)}" type="video/mp4">
     </video>
     <div class="player-overlay" id="playerOverlay">
@@ -1211,6 +1214,7 @@ def build_video_page(video_data: dict):
         body=body,
         extra_head=extra_head,
         depth=2,
+        show_nav=False,
     )
 
     # Write to video/{id}/index.html
