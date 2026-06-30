@@ -792,7 +792,7 @@ def build_video_page(video_data: dict):
 <meta property="og:video:width" content="1080">
 <meta property="og:video:height" content="1920">
 <meta name="twitter:card" content="player">
-<meta name="twitter:site" content="@RealCrystalNight">
+<meta name="twitter:site" content="@{esc(username)}">
 <meta name="twitter:title" content="{esc(title)} — @{esc(username)}">
 <meta name="twitter:description" content="{esc(desc[:200]) if desc else 'Archived TikTok video'}">
 <meta name="twitter:player" content="{esc(video_src_cdn)}">
