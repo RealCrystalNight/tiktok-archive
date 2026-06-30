@@ -451,6 +451,100 @@ a:hover { text-decoration: underline; }
   .profile-info h1 { font-size: 1.4rem; }
 }
 
+/* --- PROFILE BIO --- */
+.profile-bio {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin: 8px 0;
+  line-height: 1.5;
+  white-space: pre-line;
+}
+.profile-link {
+  display: inline-block;
+  font-size: 0.8rem;
+  color: var(--link);
+  margin-bottom: 12px;
+}
+
+/* --- HOVER PREVIEW --- */
+.video-card .hover-preview {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+  z-index: 1;
+}
+.video-card:hover .hover-preview { opacity: 1; }
+.video-card:hover .hover-preview + img,
+.video-card:hover .hover-preview ~ div { opacity: 0; transition: opacity 0.2s; }
+
+/* --- TIKTOK PLAYER CONTROLS --- */
+.player-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+}
+.player-overlay.hidden { display: none; }
+.play-icon {
+  width: 64px; height: 64px;
+  opacity: 0.8;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.5));
+  transition: opacity 0.15s;
+}
+.player-overlay:hover .play-icon { opacity: 1; }
+
+.player-controls {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  padding: 24px 12px 8px;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.video-player-wrap:hover .player-controls { opacity: 1; }
+
+.progress-bar {
+  width: 100%;
+  height: 3px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 2px;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+.progress-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 2px;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+.controls-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.ctrl-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+}
+.ctrl-btn svg { width: 24px; height: 24px; }
+
 /* --- SCROLLBAR --- */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }

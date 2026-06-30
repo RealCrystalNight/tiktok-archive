@@ -534,6 +534,100 @@ a:hover { text-decoration: underline; }
   .profile-info h1 { font-size: 1.4rem; }
 }
 
+/* --- PROFILE BIO --- */
+.profile-bio {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin: 8px 0;
+  line-height: 1.5;
+  white-space: pre-line;
+}
+.profile-link {
+  display: inline-block;
+  font-size: 0.8rem;
+  color: var(--link);
+  margin-bottom: 12px;
+}
+
+/* --- HOVER PREVIEW --- */
+.video-card .hover-preview {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+  z-index: 1;
+}
+.video-card:hover .hover-preview { opacity: 1; }
+.video-card:hover .hover-preview + img,
+.video-card:hover .hover-preview ~ div { opacity: 0; transition: opacity 0.2s; }
+
+/* --- TIKTOK PLAYER CONTROLS --- */
+.player-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+}
+.player-overlay.hidden { display: none; }
+.play-icon {
+  width: 64px; height: 64px;
+  opacity: 0.8;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.5));
+  transition: opacity 0.15s;
+}
+.player-overlay:hover .play-icon { opacity: 1; }
+
+.player-controls {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  padding: 24px 12px 8px;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.video-player-wrap:hover .player-controls { opacity: 1; }
+
+.progress-bar {
+  width: 100%;
+  height: 3px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 2px;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+.progress-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 2px;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+.controls-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.ctrl-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+}
+.ctrl-btn svg { width: 24px; height: 24px; }
+
 /* --- SCROLLBAR --- */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
@@ -544,18 +638,129 @@ a:hover { text-decoration: underline; }
 # JS
 # ============================================================
 JS = """\
-// Spinning disk sync with video playback
+// TikTok-style video player + hover preview
 document.addEventListener('DOMContentLoaded', function() {
-  var video = document.querySelector('video');
+  // === HOVER PREVIEW ON GRID CARDS ===
+  document.querySelectorAll('.video-card').forEach(function(card) {
+    var preview = card.querySelector('.hover-preview');
+    if (!preview) return;
+    var src = preview.dataset.src;
+    var hoverTimeout;
+
+    card.addEventListener('mouseenter', function() {
+      hoverTimeout = setTimeout(function() {
+        preview.src = src;
+        preview.play().catch(function(){});
+      }, 400);
+    });
+    card.addEventListener('mouseleave', function() {
+      clearTimeout(hoverTimeout);
+      preview.pause();
+      preview.removeAttribute('src');
+      preview.load();
+    });
+  });
+
+  // === TIKTOK VIDEO PLAYER ===
+  var video = document.getElementById('tiktokPlayer');
+  var overlay = document.getElementById('playerOverlay');
+  var playBtn = document.getElementById('playBtn');
+  var playIcon = document.getElementById('playIcon');
+  var pauseIcon = document.getElementById('pauseIcon');
+  var muteBtn = document.getElementById('muteBtn');
+  var unmuteIcon = document.getElementById('unmuteIcon');
+  var muteIcon = document.getElementById('muteIcon');
+  var progressFill = document.getElementById('progressFill');
+  var progressBar = document.getElementById('progressBar');
   var disk = document.querySelector('.music-disk');
-  if (!video || !disk) return;
 
-  video.addEventListener('play', function() { disk.classList.add('spinning'); });
-  video.addEventListener('pause', function() { disk.classList.remove('spinning'); });
-  video.addEventListener('ended', function() { disk.classList.remove('spinning'); });
+  if (!video) return;
 
-  // Start spinning if video autoplays
-  if (!video.paused) disk.classList.add('spinning');
+  function togglePlay() {
+    if (video.paused) { video.play(); } else { video.pause(); }
+  }
+
+  // Click overlay to play/pause
+  if (overlay) {
+    overlay.addEventListener('click', function(e) {
+      e.stopPropagation();
+      togglePlay();
+    });
+  }
+
+  // Click video to play/pause
+  video.addEventListener('click', function(e) {
+    e.stopPropagation();
+    togglePlay();
+  });
+
+  // Play/pause button
+  if (playBtn) {
+    playBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      togglePlay();
+    });
+  }
+
+  // Update UI on play/pause
+  video.addEventListener('play', function() {
+    if (overlay) overlay.classList.add('hidden');
+    if (playIcon) playIcon.style.display = 'none';
+    if (pauseIcon) pauseIcon.style.display = '';
+    if (disk) disk.classList.add('spinning');
+  });
+  video.addEventListener('pause', function() {
+    if (overlay) overlay.classList.remove('hidden');
+    if (playIcon) playIcon.style.display = '';
+    if (pauseIcon) pauseIcon.style.display = 'none';
+    if (disk) disk.classList.remove('spinning');
+  });
+  video.addEventListener('ended', function() {
+    if (overlay) overlay.classList.remove('hidden');
+    if (playIcon) playIcon.style.display = '';
+    if (pauseIcon) pauseIcon.style.display = 'none';
+    if (disk) disk.classList.remove('spinning');
+  });
+
+  // Mute/unmute
+  if (muteBtn) {
+    video.muted = true;
+    muteBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      video.muted = !video.muted;
+      if (unmuteIcon) unmuteIcon.style.display = video.muted ? '' : 'none';
+      if (muteIcon) muteIcon.style.display = video.muted ? 'none' : '';
+    });
+  }
+
+  // Progress bar
+  video.addEventListener('timeupdate', function() {
+    if (video.duration) {
+      progressFill.style.width = (video.currentTime / video.duration * 100) + '%';
+    }
+  });
+  if (progressBar) {
+    progressBar.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var rect = progressBar.getBoundingClientRect();
+      var pct = (e.clientX - rect.left) / rect.width;
+      video.currentTime = pct * video.duration;
+    });
+  }
+
+  // Spacebar to play/pause
+  document.addEventListener('keydown', function(e) {
+    if (e.code === 'Space' && document.activeElement.tagName !== 'INPUT') {
+      e.preventDefault();
+      togglePlay();
+    }
+  });
+
+  // Autoplay (muted by default for autoplay policy)
+  video.play().catch(function() {
+    // Autoplay blocked, show overlay
+    if (overlay) overlay.classList.remove('hidden');
+  });
 });
 """
 
@@ -638,9 +843,12 @@ def build_index():
         thumb_html = f'<img src="{esc(thumb)}" alt="{title}" loading="lazy">' if thumb else '<div style="width:100%;height:100%;background:#1a1a1a"></div>'
 
         cards += f"""
-<div class="video-card">
+<div class="video-card" data-vid="{esc(vid)}">
   <a href="video/{vid}/">
     {thumb_html}
+    <video class="hover-preview" muted loop preload="none" playsinline
+           data-src="{esc(video_cdn_url(vid))}"
+           poster="{esc(thumb)}"></video>
     <span class="duration-badge">{duration}</span>
     <div class="overlay">
       <div class="title">{title}</div>
@@ -663,14 +871,20 @@ def build_index():
     <div class="profile-info">
       <h1>{esc(profile.get('nickname', username))}</h1>
       <div class="username">@{esc(username)}</div>
+      <div class="profile-bio">{linkify(esc(profile.get('signature', '')))}</div>
+      {f'<a href="{esc(profile.get("bio_link",""))}" target="_blank" rel="noopener" class="profile-link">{esc(profile.get("bio_link",""))}</a>' if profile.get('bio_link') else ''}
       <div class="profile-stats">
         <div class="profile-stat">
-          <div class="num">{len(videos)}</div>
-          <div class="label">Videos</div>
+          <div class="num">{fmt_count(profile.get('following_count', 0))}</div>
+          <div class="label">Following</div>
         </div>
         <div class="profile-stat">
-          <div class="num">{fmt_count(profile.get('total_likes', 0))}</div>
-          <div class="label">Total Likes</div>
+          <div class="num">{fmt_count(profile.get('follower_count', 0))}</div>
+          <div class="label">Followers</div>
+        </div>
+        <div class="profile-stat">
+          <div class="num">{fmt_count(profile.get('heart_count', 0))}</div>
+          <div class="label">Likes</div>
         </div>
       </div>
     </div>
@@ -825,11 +1039,29 @@ def build_video_page(video_data: dict):
 
     body = f"""
 <div class="video-page">
-  <div class="video-player-wrap">
-    <video controls preload="metadata" poster="{esc(thumb)}">
+  <div class="video-player-wrap" id="playerWrap">
+    <video id="tiktokPlayer" autoplay playsinline preload="metadata" poster="{esc(thumb)}">
       <source src="{esc(video_src_local)}" type="video/mp4">
-      Your browser does not support the video tag.
     </video>
+    <div class="player-overlay" id="playerOverlay">
+      <svg class="play-icon" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+    </div>
+    <div class="player-controls" id="playerControls">
+      <div class="progress-bar" id="progressBar"><div class="progress-fill" id="progressFill"></div></div>
+      <div class="controls-row">
+        <button class="ctrl-btn" id="playBtn" title="Play/Pause">
+          <svg viewBox="0 0 24 24" fill="white" id="playIcon"><path d="M8 5v14l11-7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="white" id="pauseIcon" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <button class="ctrl-btn" id="muteBtn" title="Mute/Unmute">
+          <svg viewBox="0 0 24 24" fill="white" id="unmuteIcon"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+          <svg viewBox="0 0 24 24" fill="white" id="muteIcon" style="display:none"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
+        </button>
+        <a href="{esc(video_src_cdn)}" download class="ctrl-btn" title="Download" id="downloadBtn">
+          <svg viewBox="0 0 24 24" fill="white"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+        </a>
+      </div>
+    </div>
   </div>
   <div class="video-sidebar">
     <div class="video-info">
@@ -850,10 +1082,6 @@ def build_video_page(video_data: dict):
         <span class="video-meta-item">{duration}</span>
         <span class="video-meta-item">{upload_date}</span>
       </div>
-      <a href="{esc(video_url)}" target="_blank" rel="noopener" class="download-btn">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-        Download Full Quality
-      </a>
     </div>
 
     <div class="video-author">
