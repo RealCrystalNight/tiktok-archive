@@ -86,6 +86,10 @@
     <div class="player-overlay" id="playerOverlay">
       <svg class="play-icon" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
     </div>
+    <button class="unmute-top" id="unmuteTop" title="Click to unmute">
+      <svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+      <span>Unmute</span>
+    </button>
     <div class="player-controls" id="playerControls">
       <div class="progress-bar" id="progressBar"><div class="progress-fill" id="progressFill"></div></div>
       <div class="controls-row">
@@ -152,14 +156,15 @@
     <div class="comment-text">lain would never</div>
     <div class="comment-meta">
       <span>25 likes</span>
-      <span>1 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@usernameyur1i_018" target="_blank" rel="noopener">Yuri</a></div>
-          <div class="comment-text">would never what?</div>
-          <div class="comment-meta"><span>11 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 1 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@usernameyur1i_018" target="_blank" rel="noopener">Yuri</a></div>
+          <div class="reply-text">would never what?</div>
+          <div class="reply-meta"><span>11 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -171,8 +176,8 @@
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>1 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -183,8 +188,8 @@
     <div class="comment-text">Ai 😔🙏🏽</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -195,8 +200,8 @@
     <div class="comment-text">So many memories running my head</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -207,8 +212,8 @@
     <div class="comment-text">Lets all love lain</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -219,8 +224,8 @@
     <div class="comment-text">Lives up to expectations</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -231,8 +236,8 @@
     <div class="comment-text">me:</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -243,8 +248,8 @@
     <div class="comment-text">/kayzehen</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -255,8 +260,8 @@
     <div class="comment-text">u so pretty</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -267,8 +272,8 @@
     <div class="comment-text">It made me feel something, I don&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;t know what it is,nostalgia ??</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -279,8 +284,8 @@
     <div class="comment-text">Let&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;s all love lain</div>
     <div class="comment-meta">
       <span>4 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -291,8 +296,8 @@
     <div class="comment-text">Cool ahh pc setup</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -303,8 +308,8 @@
     <div class="comment-text">OMG I fell in love🥰</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -315,8 +320,8 @@
     <div class="comment-text">w theme</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -327,8 +332,8 @@
     <div class="comment-text">epic fit💯</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -339,8 +344,8 @@
     <div class="comment-text">twin so cool👀</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -351,8 +356,8 @@
     <div class="comment-text">Lain is live</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -363,8 +368,8 @@
     <div class="comment-text">lainnn</div>
     <div class="comment-meta">
       <span>4 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -375,8 +380,8 @@
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>1 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -387,8 +392,8 @@
     <div class="comment-text">[Sticker] 🪻🥀🌾🪷🌹</div>
     <div class="comment-meta">
       <span>2 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -399,8 +404,8 @@
     <div class="comment-text">muchas gracias</div>
     <div class="comment-meta">
       <span>2 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -411,8 +416,8 @@
     <div class="comment-text">quien es esa belleza? 👀👀</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -423,8 +428,8 @@
     <div class="comment-text">nuevo gusto desbloqueado</div>
     <div class="comment-meta">
       <span>2 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -435,8 +440,8 @@
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -447,8 +452,8 @@
     <div class="comment-text">Tuuuuu tututu tuuuu, теперь я знаю какую песню мне включить по дороге домой</div>
     <div class="comment-meta">
       <span>1 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -459,8 +464,8 @@
     <div class="comment-text">Игорь, ты?</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -471,8 +476,8 @@
     <div class="comment-text">se aparece a la chica de Hellboy</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -483,8 +488,8 @@
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>1 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -495,8 +500,8 @@
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -507,8 +512,8 @@
     <div class="comment-text">too expressive too much smile</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -519,8 +524,8 @@
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -531,8 +536,8 @@
     <div class="comment-text">😍</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -543,8 +548,8 @@
     <div class="comment-text">💯💯💯</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -555,8 +560,8 @@
     <div class="comment-text">:] 🎶</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -567,8 +572,8 @@
     <div class="comment-text">😔</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -579,8 +584,8 @@
     <div class="comment-text">😻😻😻</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -591,8 +596,8 @@
     <div class="comment-text">❤️❤️❤️</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -603,8 +608,8 @@
     <div class="comment-text">❤❤❤</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -615,8 +620,8 @@
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -627,8 +632,8 @@
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -639,8 +644,8 @@
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -651,8 +656,8 @@
     <div class="comment-text">осеменить ЖИВО</div>
     <div class="comment-meta">
       <span>1 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -663,8 +668,8 @@
     <div class="comment-text">hermosa</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -675,8 +680,8 @@
     <div class="comment-text">[Sticker] Alejence es mi nov...</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -687,8 +692,8 @@
     <div class="comment-text">mb you need to reinstall windows?..</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -699,8 +704,8 @@
     <div class="comment-text">that&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;s cool can I have ur 2nd monitor?</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -711,8 +716,8 @@
     <div class="comment-text">High caliber tok</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>

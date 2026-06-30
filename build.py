@@ -245,12 +245,14 @@ a:hover { text-decoration: underline; }
   align-items: center;
   justify-content: center;
   background: #000;
+  overflow: hidden;
 }
 .video-player-wrap video {
   max-width: 100%;
   max-height: 100%;
   width: auto;
   height: 100%;
+  object-fit: contain;
 }
 .video-sidebar {
   border-left: 1px solid var(--border);
@@ -430,13 +432,61 @@ a:hover { text-decoration: underline; }
   font-size: 0.7rem;
   color: var(--text-muted);
 }
+
+/* View replies button */
+.view-replies-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  cursor: pointer;
+  padding: 4px 0;
+  margin-top: 4px;
+}
+.view-replies-btn:hover { color: var(--text-secondary); }
+
+/* Replies — TikTok style */
 .replies {
   margin-top: 8px;
+  padding-left: 0;
+}
+.reply {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
   padding-left: 12px;
   border-left: 2px solid var(--border);
 }
-.replies .comment { padding: 4px 0; }
-.replies .comment-avatar { width: 24px; height: 24px; }
+.reply-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.reply-body { flex: 1; }
+.reply-author {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+.reply-author a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+.reply-author a:hover { color: var(--link); }
+.reply-text {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  word-break: break-word;
+}
+.reply-meta {
+  margin-top: 2px;
+  font-size: 0.68rem;
+  color: var(--text-muted);
+}
 
 /* Download btn */
 .download-btn {
@@ -628,6 +678,28 @@ a:hover { text-decoration: underline; }
 }
 .ctrl-btn svg { width: 24px; height: 24px; }
 
+.unmute-top {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 4;
+  background: rgba(0,0,0,0.6);
+  border: none;
+  border-radius: 20px;
+  color: white;
+  padding: 8px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  backdrop-filter: blur(4px);
+  transition: opacity 0.2s, background 0.15s;
+}
+.unmute-top:hover { background: rgba(0,0,0,0.8); }
+.unmute-top.hidden { opacity: 0; pointer-events: none; }
+
 /* --- SCROLLBAR --- */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
@@ -723,6 +795,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Mute/unmute
+  var unmuteTop = document.getElementById('unmuteTop');
   if (muteBtn) {
     video.muted = true;
     muteBtn.addEventListener('click', function(e) {
@@ -730,6 +803,16 @@ document.addEventListener('DOMContentLoaded', function() {
       video.muted = !video.muted;
       if (unmuteIcon) unmuteIcon.style.display = video.muted ? '' : 'none';
       if (muteIcon) muteIcon.style.display = video.muted ? 'none' : '';
+      if (unmuteTop) unmuteTop.classList.toggle('hidden', !video.muted);
+    });
+  }
+  if (unmuteTop) {
+    unmuteTop.addEventListener('click', function(e) {
+      e.stopPropagation();
+      video.muted = false;
+      if (unmuteIcon) unmuteIcon.style.display = 'none';
+      if (muteIcon) muteIcon.style.display = '';
+      unmuteTop.classList.add('hidden');
     });
   }
 
@@ -958,18 +1041,26 @@ def build_video_page(video_data: dict):
 
         # Replies
         replies_html = ""
+        reply_count = c.get("reply_count", 0)
         for r in c.get("replies", [])[:20]:
+            r_avatar = r.get("avatar", "")
+            r_avatar_html = f'<img src="{esc(r_avatar)}" alt="" class="reply-avatar">' if r_avatar else '<div class="reply-avatar" style="background:#333"></div>'
             r_author = esc(r.get("nickname", "") or r.get("user", "") or "unknown")
             r_text = linkify(esc(r.get("text", "")))
             r_likes = fmt_count(r.get("likes", 0))
             replies_html += f"""
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@{esc(r.get('user',''))}" target="_blank" rel="noopener">{r_author}</a></div>
-          <div class="comment-text">{r_text}</div>
-          <div class="comment-meta"><span>{r_likes} likes</span></div>
+      <div class="reply">
+        {r_avatar_html}
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@{esc(r.get('user',''))}" target="_blank" rel="noopener">{r_author}</a></div>
+          <div class="reply-text">{r_text}</div>
+          <div class="reply-meta"><span>{r_likes} likes</span></div>
         </div>
       </div>"""
+
+        view_replies = ""
+        if reply_count > 0 and replies_html:
+            view_replies = f'<button class="view-replies-btn" onclick="this.nextElementSibling.style.display=\'block\';this.style.display=\'none\'">View all {reply_count} replies</button>'
 
         comments_html += f"""
 <div class="comment">
@@ -979,9 +1070,9 @@ def build_video_page(video_data: dict):
     <div class="comment-text">{c_text}</div>
     <div class="comment-meta">
       <span>{c_likes} likes</span>
-      {f'<span>{c.get("reply_count",0)} replies</span>' if c.get("reply_count") else ''}
     </div>
-    {f'<div class="replies">{replies_html}</div>' if replies_html else ''}
+    {view_replies}
+    {f'<div class="replies" style="display:none">{replies_html}</div>' if replies_html else ''}
   </div>
 </div>"""
 
@@ -1046,6 +1137,10 @@ def build_video_page(video_data: dict):
     <div class="player-overlay" id="playerOverlay">
       <svg class="play-icon" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
     </div>
+    <button class="unmute-top" id="unmuteTop" title="Click to unmute">
+      <svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+      <span>Unmute</span>
+    </button>
     <div class="player-controls" id="playerControls">
       <div class="progress-bar" id="progressBar"><div class="progress-fill" id="progressFill"></div></div>
       <div class="controls-row">

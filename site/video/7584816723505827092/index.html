@@ -86,6 +86,10 @@
     <div class="player-overlay" id="playerOverlay">
       <svg class="play-icon" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
     </div>
+    <button class="unmute-top" id="unmuteTop" title="Click to unmute">
+      <svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+      <span>Unmute</span>
+    </button>
     <div class="player-controls" id="playerControls">
       <div class="progress-bar" id="progressBar"><div class="progress-fill" id="progressFill"></div></div>
       <div class="controls-row">
@@ -152,49 +156,55 @@
     <div class="comment-text">What happened to the discord?</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      <span>6 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@canthinkyy" target="_blank" rel="noopener">canthinky</a></div>
-          <div class="comment-text">deleted</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 6 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@canthinkyy" target="_blank" rel="noopener">canthinky</a></div>
+          <div class="reply-text">deleted</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@unsightedkhan9" target="_blank" rel="noopener">unsightedkhan9</a></div>
-          <div class="comment-text">Aww, damn</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@unsightedkhan9" target="_blank" rel="noopener">unsightedkhan9</a></div>
+          <div class="reply-text">Aww, damn</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@corn_dogz0" target="_blank" rel="noopener">CornDogz0</a></div>
-          <div class="comment-text">Wait what happened</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@corn_dogz0" target="_blank" rel="noopener">CornDogz0</a></div>
+          <div class="reply-text">Wait what happened</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@unsightedkhan9" target="_blank" rel="noopener">unsightedkhan9</a></div>
-          <div class="comment-text">The discord got deleted</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@unsightedkhan9" target="_blank" rel="noopener">unsightedkhan9</a></div>
+          <div class="reply-text">The discord got deleted</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@corn_dogz0" target="_blank" rel="noopener">CornDogz0</a></div>
-          <div class="comment-text">Oh dang</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@corn_dogz0" target="_blank" rel="noopener">CornDogz0</a></div>
+          <div class="reply-text">Oh dang</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@unsightedkhan9" target="_blank" rel="noopener">unsightedkhan9</a></div>
-          <div class="comment-text">Yeah, sucks</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@unsightedkhan9" target="_blank" rel="noopener">unsightedkhan9</a></div>
+          <div class="reply-text">Yeah, sucks</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -206,21 +216,23 @@
     <div class="comment-text">[Sticker] I wish I was living in a place that warm and not freezing cold</div>
     <div class="comment-meta">
       <span>8 likes</span>
-      <span>4 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@asa102817" target="_blank" rel="noopener">Asa ᖭི༏ᖫྀ</a></div>
-          <div class="comment-text">U dont bro😭 being cold genuinely hurts</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 4 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@asa102817" target="_blank" rel="noopener">Asa ᖭི༏ᖫྀ</a></div>
+          <div class="reply-text">U dont bro😭 being cold genuinely hurts</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@sushivegemite" target="_blank" rel="noopener">K</a></div>
-          <div class="comment-text">Bruh it snows a lot in aus</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@sushivegemite" target="_blank" rel="noopener">K</a></div>
+          <div class="reply-text">Bruh it snows a lot in aus</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -232,8 +244,8 @@
     <div class="comment-text">hello how are you</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -244,8 +256,8 @@
     <div class="comment-text">outfits are always good</div>
     <div class="comment-meta">
       <span>2 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -256,8 +268,8 @@
     <div class="comment-text">the bird flying past was kinda like an intro</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -268,8 +280,8 @@
     <div class="comment-text">striped outfit is goated broo</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -280,8 +292,8 @@
     <div class="comment-text">where’d you get the skirt from???</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -292,8 +304,8 @@
     <div class="comment-text">wait, did you make this outfit yourself? looks really cool</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -304,8 +316,8 @@
     <div class="comment-text">Vibes</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -316,8 +328,8 @@
     <div class="comment-text">The bird was a paid actor</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -328,8 +340,8 @@
     <div class="comment-text">need more fit checks omg your style is the cutest!!!!!!</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -340,8 +352,8 @@
     <div class="comment-text">cool fit 😎👌</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -352,8 +364,8 @@
     <div class="comment-text">sigh...... 😩</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -364,8 +376,8 @@
     <div class="comment-text">CUTEEE</div>
     <div class="comment-meta">
       <span>1 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -376,8 +388,8 @@
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -388,8 +400,8 @@
     <div class="comment-text">🖤🔥💣🐚🖤</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -400,8 +412,8 @@
     <div class="comment-text">💯</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -412,8 +424,8 @@
     <div class="comment-text">Qt</div>
     <div class="comment-meta">
       <span>1 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -424,8 +436,8 @@
     <div class="comment-text">Can we be moots PLEASEE</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -436,8 +448,8 @@
     <div class="comment-text">Pun pun ah outfit</div>
     <div class="comment-meta">
       <span>3 likes</span>
-      
     </div>
+    
     
   </div>
 </div>

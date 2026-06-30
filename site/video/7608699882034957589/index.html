@@ -86,6 +86,10 @@
     <div class="player-overlay" id="playerOverlay">
       <svg class="play-icon" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
     </div>
+    <button class="unmute-top" id="unmuteTop" title="Click to unmute">
+      <svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+      <span>Unmute</span>
+    </button>
     <div class="player-controls" id="playerControls">
       <div class="progress-bar" id="progressBar"><div class="progress-fill" id="progressFill"></div></div>
       <div class="controls-row">
@@ -152,126 +156,143 @@
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>759 likes</span>
-      <span>22 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@canthinkyy" target="_blank" rel="noopener">canthinky</a></div>
-          <div class="comment-text">tell me what i’m larping</div>
-          <div class="comment-meta"><span>83 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 22 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@canthinkyy" target="_blank" rel="noopener">canthinky</a></div>
+          <div class="reply-text">tell me what i’m larping</div>
+          <div class="reply-meta"><span>83 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@blackmagick999" target="_blank" rel="noopener">blackmagick666</a></div>
-          <div class="comment-text">Colby</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@blackmagick999" target="_blank" rel="noopener">blackmagick666</a></div>
+          <div class="reply-text">Colby</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@canthinkyy" target="_blank" rel="noopener">canthinky</a></div>
-          <div class="comment-text">is it larping colby when he originally asked me to try it 🤔</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@canthinkyy" target="_blank" rel="noopener">canthinky</a></div>
+          <div class="reply-text">is it larping colby when he originally asked me to try it 🤔</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@gd_0418" target="_blank" rel="noopener">Gijs_0418</a></div>
-          <div class="comment-text">burzum</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@gd_0418" target="_blank" rel="noopener">Gijs_0418</a></div>
+          <div class="reply-text">burzum</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@hecrodart" target="_blank" rel="noopener">hecrodart</a></div>
-          <div class="comment-text">Eggs</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@hecrodart" target="_blank" rel="noopener">hecrodart</a></div>
+          <div class="reply-text">Eggs</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@insufferablecornball" target="_blank" rel="noopener">1000Watz</a></div>
-          <div class="comment-text">tbh that&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;s a good thing😭</div>
-          <div class="comment-meta"><span>3 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@insufferablecornball" target="_blank" rel="noopener">1000Watz</a></div>
+          <div class="reply-text">tbh that&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;s a good thing😭</div>
+          <div class="reply-meta"><span>3 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@the.singularity_" target="_blank" rel="noopener">The Singularity</a></div>
-          <div class="comment-text">its not larping if shes actually doing it</div>
-          <div class="comment-meta"><span>5 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@the.singularity_" target="_blank" rel="noopener">The Singularity</a></div>
+          <div class="reply-text">its not larping if shes actually doing it</div>
+          <div class="reply-meta"><span>5 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@canthinkyy" target="_blank" rel="noopener">canthinky</a></div>
-          <div class="comment-text">you can literally see me eating a raw egg in the video 😖</div>
-          <div class="comment-meta"><span>20 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@canthinkyy" target="_blank" rel="noopener">canthinky</a></div>
+          <div class="reply-text">you can literally see me eating a raw egg in the video 😖</div>
+          <div class="reply-meta"><span>20 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@fanka_tati_nati133" target="_blank" rel="noopener">Fanka_tati_nati133</a></div>
-          <div class="comment-text">Lol is it just me or the most enjoyable thing for me to eat is raw liver then there is eggs and on the last spot is raw meat</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@fanka_tati_nati133" target="_blank" rel="noopener">Fanka_tati_nati133</a></div>
+          <div class="reply-text">Lol is it just me or the most enjoyable thing for me to eat is raw liver then there is eggs and on the last spot is raw meat</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@canthinkyy" target="_blank" rel="noopener">canthinky</a></div>
-          <div class="comment-text">i literally got them from farmers gang i have a whitening filter on this video as well</div>
-          <div class="comment-meta"><span>2 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@canthinkyy" target="_blank" rel="noopener">canthinky</a></div>
+          <div class="reply-text">i literally got them from farmers gang i have a whitening filter on this video as well</div>
+          <div class="reply-meta"><span>2 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@cheesegetta" target="_blank" rel="noopener">cheesegetta</a></div>
-          <div class="comment-text">dont worry about them primal underground shawty</div>
-          <div class="comment-meta"><span>2 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@cheesegetta" target="_blank" rel="noopener">cheesegetta</a></div>
+          <div class="reply-text">dont worry about them primal underground shawty</div>
+          <div class="reply-meta"><span>2 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@madinoelll" target="_blank" rel="noopener">madisyn౨ৎ</a></div>
-          <div class="comment-text">you people genuinely need jobs</div>
-          <div class="comment-meta"><span>8 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@madinoelll" target="_blank" rel="noopener">madisyn౨ৎ</a></div>
+          <div class="reply-text">you people genuinely need jobs</div>
+          <div class="reply-meta"><span>8 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@drainmaaan" target="_blank" rel="noopener">＼＼\\٩( &#x27;ω&#x27; )و //／／</a></div>
-          <div class="comment-text">everyone across the world does that beo</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@drainmaaan" target="_blank" rel="noopener">＼＼\\٩( &#x27;ω&#x27; )و //／／</a></div>
+          <div class="reply-text">everyone across the world does that beo</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@insufferablecornball" target="_blank" rel="noopener">1000Watz</a></div>
-          <div class="comment-text">tbh it might be a good thing to larp the diet😭</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@insufferablecornball" target="_blank" rel="noopener">1000Watz</a></div>
+          <div class="reply-text">tbh it might be a good thing to larp the diet😭</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@tvjn80" target="_blank" rel="noopener">Tajjas</a></div>
-          <div class="comment-text">healthy eggs are orange not yellow</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@tvjn80" target="_blank" rel="noopener">Tajjas</a></div>
+          <div class="reply-text">healthy eggs are orange not yellow</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@c_hoppa1" target="_blank" rel="noopener">.</a></div>
-          <div class="comment-text">primal diet boi</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@c_hoppa1" target="_blank" rel="noopener">.</a></div>
+          <div class="reply-text">primal diet boi</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@lazy.me05" target="_blank" rel="noopener">Lazarus</a></div>
-          <div class="comment-text">Egg</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@lazy.me05" target="_blank" rel="noopener">Lazarus</a></div>
+          <div class="reply-text">Egg</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -283,21 +304,23 @@
     <div class="comment-text">And why do u wanna start the diet in the first place</div>
     <div class="comment-meta">
       <span>1 likes</span>
-      <span>2 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@canthinkyy" target="_blank" rel="noopener">canthinky</a></div>
-          <div class="comment-text">because i’m unhealthy as hell im basically anemic among other things</div>
-          <div class="comment-meta"><span>11 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 2 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@canthinkyy" target="_blank" rel="noopener">canthinky</a></div>
+          <div class="reply-text">because i’m unhealthy as hell im basically anemic among other things</div>
+          <div class="reply-meta"><span>11 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@eviltransylvanianvampire" target="_blank" rel="noopener">xs</a></div>
-          <div class="comment-text">best diet real food</div>
-          <div class="comment-meta"><span>3 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@eviltransylvanianvampire" target="_blank" rel="noopener">xs</a></div>
+          <div class="reply-text">best diet real food</div>
+          <div class="reply-meta"><span>3 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -309,56 +332,63 @@
     <div class="comment-text">dont drink the whites raw lol it has anti nutrients, just drink the yolk raw</div>
     <div class="comment-meta">
       <span>12 likes</span>
-      <span>8 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@urinatir" target="_blank" rel="noopener">urinatir</a></div>
-          <div class="comment-text">it quite literally does contain avidin, an antinutrient</div>
-          <div class="comment-meta"><span>4 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 8 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@urinatir" target="_blank" rel="noopener">urinatir</a></div>
+          <div class="reply-text">it quite literally does contain avidin, an antinutrient</div>
+          <div class="reply-meta"><span>4 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@victor..._..._" target="_blank" rel="noopener">victor</a></div>
-          <div class="comment-text">Yes, but you&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;d need to consume a very large amount of eggs in a month for it to even take any noticeable effect. Its worth consuming the egg whites overall because it provides the necessary enzymes and nutrients to actually help digest the yolk.</div>
-          <div class="comment-meta"><span>2 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@victor..._..._" target="_blank" rel="noopener">victor</a></div>
+          <div class="reply-text">Yes, but you&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;d need to consume a very large amount of eggs in a month for it to even take any noticeable effect. Its worth consuming the egg whites overall because it provides the necessary enzymes and nutrients to actually help digest the yolk.</div>
+          <div class="reply-meta"><span>2 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@someoneprofessional30" target="_blank" rel="noopener">esoteric..knight</a></div>
-          <div class="comment-text">myth</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@someoneprofessional30" target="_blank" rel="noopener">esoteric..knight</a></div>
+          <div class="reply-text">myth</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@tulpamaniac" target="_blank" rel="noopener">Jelena 🫒</a></div>
-          <div class="comment-text">milk and meat also have antinutrients might as well not eat them</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@tulpamaniac" target="_blank" rel="noopener">Jelena 🫒</a></div>
+          <div class="reply-text">milk and meat also have antinutrients might as well not eat them</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@user2strp2hklj" target="_blank" rel="noopener">user86664664052</a></div>
-          <div class="comment-text">Not really harmful but yes the egg whites raw aren&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;t optimal</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@user2strp2hklj" target="_blank" rel="noopener">user86664664052</a></div>
+          <div class="reply-text">Not really harmful but yes the egg whites raw aren&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;t optimal</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@me_nd_da_anarcho_bluds" target="_blank" rel="noopener">***</a></div>
-          <div class="comment-text">tt knowlede</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@me_nd_da_anarcho_bluds" target="_blank" rel="noopener">***</a></div>
+          <div class="reply-text">tt knowlede</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@noahfischerhen" target="_blank" rel="noopener">☧NoahFischer🜋</a></div>
-          <div class="comment-text">Avidin quite literally has no effect in humans brudda, look at Aajonus studies about it. I’m sure I saw that some time ago, might’ve been rawtard that spoke of this. Many things have antinutrients that doesn’t matter, which by that would be like the other guy mentioned: Milk and meat. Egg whites even have more antinutrients, they just have no effect on humans, or atleast an effect that does anything.</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@noahfischerhen" target="_blank" rel="noopener">☧NoahFischer🜋</a></div>
+          <div class="reply-text">Avidin quite literally has no effect in humans brudda, look at Aajonus studies about it. I’m sure I saw that some time ago, might’ve been rawtard that spoke of this. Many things have antinutrients that doesn’t matter, which by that would be like the other guy mentioned: Milk and meat. Egg whites even have more antinutrients, they just have no effect on humans, or atleast an effect that does anything.</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -370,70 +400,79 @@
     <div class="comment-text">Literally doesn’t taste like anything…</div>
     <div class="comment-meta">
       <span>10 likes</span>
-      <span>9 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@canthinkyy" target="_blank" rel="noopener">canthinky</a></div>
-          <div class="comment-text">no bro it’s the feeling of the yolk that’s the issue</div>
-          <div class="comment-meta"><span>16 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 9 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@canthinkyy" target="_blank" rel="noopener">canthinky</a></div>
+          <div class="reply-text">no bro it’s the feeling of the yolk that’s the issue</div>
+          <div class="reply-meta"><span>16 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@goldstein.nyc" target="_blank" rel="noopener">GoodGuyLipton</a></div>
-          <div class="comment-text">U swallow the yolk whole though?</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@goldstein.nyc" target="_blank" rel="noopener">GoodGuyLipton</a></div>
+          <div class="reply-text">U swallow the yolk whole though?</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@canthinkyy" target="_blank" rel="noopener">canthinky</a></div>
-          <div class="comment-text">yes</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@canthinkyy" target="_blank" rel="noopener">canthinky</a></div>
+          <div class="reply-text">yes</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@fianog" target="_blank" rel="noopener">Fianna</a></div>
-          <div class="comment-text">seperate the yolk and bite it while it’s in ur mouth and then swallow</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@fianog" target="_blank" rel="noopener">Fianna</a></div>
+          <div class="reply-text">seperate the yolk and bite it while it’s in ur mouth and then swallow</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@dominrbzxhc" target="_blank" rel="noopener">Minh</a></div>
-          <div class="comment-text">Yolk? Not the slimy egg white? I was gonna say cook the whites bc it also destroys avidin and keep the yolks raw</div>
-          <div class="comment-meta"><span>1 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@dominrbzxhc" target="_blank" rel="noopener">Minh</a></div>
+          <div class="reply-text">Yolk? Not the slimy egg white? I was gonna say cook the whites bc it also destroys avidin and keep the yolks raw</div>
+          <div class="reply-meta"><span>1 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@big_bergstein" target="_blank" rel="noopener">Anananas</a></div>
-          <div class="comment-text">Just do egg yolks milk and honey</div>
-          <div class="comment-meta"><span>1 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@big_bergstein" target="_blank" rel="noopener">Anananas</a></div>
+          <div class="reply-text">Just do egg yolks milk and honey</div>
+          <div class="reply-meta"><span>1 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@goldstein.nyc" target="_blank" rel="noopener">GoodGuyLipton</a></div>
-          <div class="comment-text">Might aswell just bake a cake then</div>
-          <div class="comment-meta"><span>3 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@goldstein.nyc" target="_blank" rel="noopener">GoodGuyLipton</a></div>
+          <div class="reply-text">Might aswell just bake a cake then</div>
+          <div class="reply-meta"><span>3 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@big_bergstein" target="_blank" rel="noopener">Anananas</a></div>
-          <div class="comment-text">😋😮‍💨</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@big_bergstein" target="_blank" rel="noopener">Anananas</a></div>
+          <div class="reply-text">😋😮‍💨</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@keharisonni" target="_blank" rel="noopener">keharisonni</a></div>
-          <div class="comment-text">tastes like cum if it had been sitting in a jar for a year</div>
-          <div class="comment-meta"><span>1 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@keharisonni" target="_blank" rel="noopener">keharisonni</a></div>
+          <div class="reply-text">tastes like cum if it had been sitting in a jar for a year</div>
+          <div class="reply-meta"><span>1 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -445,28 +484,31 @@
     <div class="comment-text">It must be a build up tolerance or something</div>
     <div class="comment-meta">
       <span>2 likes</span>
-      <span>3 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@canthinkyy" target="_blank" rel="noopener">canthinky</a></div>
-          <div class="comment-text">no it’s raw egg lol</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 3 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@canthinkyy" target="_blank" rel="noopener">canthinky</a></div>
+          <div class="reply-text">no it’s raw egg lol</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@aliengirl6106106" target="_blank" rel="noopener">entity.☘︎🗝️˖</a></div>
-          <div class="comment-text">Bad*</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@aliengirl6106106" target="_blank" rel="noopener">entity.☘︎🗝️˖</a></div>
+          <div class="reply-text">Bad*</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@aliengirl6106106" target="_blank" rel="noopener">entity.☘︎🗝️˖</a></div>
-          <div class="comment-text">I thought it was alc, so my band</div>
-          <div class="comment-meta"><span>1 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@aliengirl6106106" target="_blank" rel="noopener">entity.☘︎🗝️˖</a></div>
+          <div class="reply-text">I thought it was alc, so my band</div>
+          <div class="reply-meta"><span>1 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -478,63 +520,71 @@
     <div class="comment-text">Don’t eat the whites 🥀🥀🥀 they taste awful and have anti nutrients yolks are goated tho</div>
     <div class="comment-meta">
       <span>79 likes</span>
-      <span>9 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@canthinkyy" target="_blank" rel="noopener">canthinky</a></div>
-          <div class="comment-text">tried it today without the whites and it was way better</div>
-          <div class="comment-meta"><span>53 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 9 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@canthinkyy" target="_blank" rel="noopener">canthinky</a></div>
+          <div class="reply-text">tried it today without the whites and it was way better</div>
+          <div class="reply-meta"><span>53 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@jgungr" target="_blank" rel="noopener">JGUNGR</a></div>
-          <div class="comment-text">And whys even better is when u mix with milk 🙏🙏🙏</div>
-          <div class="comment-meta"><span>2 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@jgungr" target="_blank" rel="noopener">JGUNGR</a></div>
+          <div class="reply-text">And whys even better is when u mix with milk 🙏🙏🙏</div>
+          <div class="reply-meta"><span>2 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@wltuh83" target="_blank" rel="noopener">WaltuhDon</a></div>
-          <div class="comment-text">Drink whites its js more hydration and the anti nutrient is negligible</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@wltuh83" target="_blank" rel="noopener">WaltuhDon</a></div>
+          <div class="reply-text">Drink whites its js more hydration and the anti nutrient is negligible</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@a.madeu.s" target="_blank" rel="noopener">amadeus</a></div>
-          <div class="comment-text">just eat as intended its fine</div>
-          <div class="comment-meta"><span>2 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@a.madeu.s" target="_blank" rel="noopener">amadeus</a></div>
+          <div class="reply-text">just eat as intended its fine</div>
+          <div class="reply-meta"><span>2 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@okay.ltnr" target="_blank" rel="noopener">ok*y</a></div>
-          <div class="comment-text">humans didn&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;t eat eggs at all in nature</div>
-          <div class="comment-meta"><span>2 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@okay.ltnr" target="_blank" rel="noopener">ok*y</a></div>
+          <div class="reply-text">humans didn&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;t eat eggs at all in nature</div>
+          <div class="reply-meta"><span>2 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@a.madeu.s" target="_blank" rel="noopener">amadeus</a></div>
-          <div class="comment-text">appeal to nature</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@a.madeu.s" target="_blank" rel="noopener">amadeus</a></div>
+          <div class="reply-text">appeal to nature</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@jgungr" target="_blank" rel="noopener">JGUNGR</a></div>
-          <div class="comment-text">As intended 😭 did yk most animals actually eat around the white of eggs</div>
-          <div class="comment-meta"><span>5 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@jgungr" target="_blank" rel="noopener">JGUNGR</a></div>
+          <div class="reply-text">As intended 😭 did yk most animals actually eat around the white of eggs</div>
+          <div class="reply-meta"><span>5 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@mioder_" target="_blank" rel="noopener">mioder</a></div>
-          <div class="comment-text">[Sticker] </div>
-          <div class="comment-meta"><span>1 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@mioder_" target="_blank" rel="noopener">mioder</a></div>
+          <div class="reply-text">[Sticker] </div>
+          <div class="reply-meta"><span>1 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -546,8 +596,8 @@
     <div class="comment-text">Mix it up and make sure there is no egg white on there</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -558,14 +608,15 @@
     <div class="comment-text">burzum + raw egg lol</div>
     <div class="comment-meta">
       <span>58 likes</span>
-      <span>1 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@shawntelldadon" target="_blank" rel="noopener">progressivebrownmetal</a></div>
-          <div class="comment-text">Can’t get any worse than burzum</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 1 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@shawntelldadon" target="_blank" rel="noopener">progressivebrownmetal</a></div>
+          <div class="reply-text">Can’t get any worse than burzum</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -577,21 +628,23 @@
     <div class="comment-text">drink the yolks only, white barely haves anything besides fat</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      <span>2 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@marievloer" target="_blank" rel="noopener">ℳ 𝜗𝜚</a></div>
-          <div class="comment-text">U got it confused bra its the yolks with the most fat</div>
-          <div class="comment-meta"><span>3 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 2 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@marievloer" target="_blank" rel="noopener">ℳ 𝜗𝜚</a></div>
+          <div class="reply-text">U got it confused bra its the yolks with the most fat</div>
+          <div class="reply-meta"><span>3 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@reactbaiting" target="_blank" rel="noopener">Account not found</a></div>
-          <div class="comment-text">marie tapped in</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@reactbaiting" target="_blank" rel="noopener">Account not found</a></div>
+          <div class="reply-text">marie tapped in</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -603,14 +656,15 @@
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>0 likes</span>
-      <span>1 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@james_turk06" target="_blank" rel="noopener">JT</a></div>
-          <div class="comment-text">ez protein for me boss 😎</div>
-          <div class="comment-meta"><span>1 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 1 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@james_turk06" target="_blank" rel="noopener">JT</a></div>
+          <div class="reply-text">ez protein for me boss 😎</div>
+          <div class="reply-meta"><span>1 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -622,14 +676,15 @@
     <div class="comment-text">ask colby</div>
     <div class="comment-meta">
       <span>10 likes</span>
-      <span>1 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@noctan_43" target="_blank" rel="noopener">noctan_43</a></div>
-          <div class="comment-text">Its not colby🫩🫩</div>
-          <div class="comment-meta"><span>2 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 1 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@noctan_43" target="_blank" rel="noopener">noctan_43</a></div>
+          <div class="reply-text">Its not colby🫩🫩</div>
+          <div class="reply-meta"><span>2 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -641,21 +696,23 @@
     <div class="comment-text">its not that bad</div>
     <div class="comment-meta">
       <span>1 likes</span>
-      <span>2 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@blood4._elis" target="_blank" rel="noopener">blood4</a></div>
-          <div class="comment-text">Albanian</div>
-          <div class="comment-meta"><span>5 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 2 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@blood4._elis" target="_blank" rel="noopener">blood4</a></div>
+          <div class="reply-text">Albanian</div>
+          <div class="reply-meta"><span>5 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@rot.sleep.repeat" target="_blank" rel="noopener">🗡</a></div>
-          <div class="comment-text">Greek</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@rot.sleep.repeat" target="_blank" rel="noopener">🗡</a></div>
+          <div class="reply-text">Greek</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -667,14 +724,15 @@
     <div class="comment-text">you can just mix them beforehand</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      <span>1 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@yekessssssssssssssssss" target="_blank" rel="noopener">yekessssssssssssssssss</a></div>
-          <div class="comment-text">[Sticker] </div>
-          <div class="comment-meta"><span>0 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 1 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@yekessssssssssssssssss" target="_blank" rel="noopener">yekessssssssssssssssss</a></div>
+          <div class="reply-text">[Sticker] </div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -686,14 +744,15 @@
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>0 likes</span>
-      <span>1 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@ieatppussyeveryday69" target="_blank" rel="noopener">🧁🐰</a></div>
-          <div class="comment-text">[Sticker] </div>
-          <div class="comment-meta"><span>0 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 1 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@ieatppussyeveryday69" target="_blank" rel="noopener">🧁🐰</a></div>
+          <div class="reply-text">[Sticker] </div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -705,14 +764,15 @@
     <div class="comment-text">u need just yolks bc whites have avidin(anti nutrient) which blocks biotin absortion</div>
     <div class="comment-meta">
       <span>4 likes</span>
-      <span>1 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@a.madeu.s" target="_blank" rel="noopener">amadeus</a></div>
-          <div class="comment-text">theres plenty biotin makes no sense to care</div>
-          <div class="comment-meta"><span>5 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 1 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@a.madeu.s" target="_blank" rel="noopener">amadeus</a></div>
+          <div class="reply-text">theres plenty biotin makes no sense to care</div>
+          <div class="reply-meta"><span>5 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -724,8 +784,8 @@
     <div class="comment-text">try only the yolk with raw milk</div>
     <div class="comment-meta">
       <span>2 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -736,14 +796,15 @@
     <div class="comment-text">Easiest thing to eat in the diet bro</div>
     <div class="comment-meta">
       <span>4 likes</span>
-      <span>1 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@canthinkyy" target="_blank" rel="noopener">canthinky</a></div>
-          <div class="comment-text">😱</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 1 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@canthinkyy" target="_blank" rel="noopener">canthinky</a></div>
+          <div class="reply-text">😱</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -756,8 +817,8 @@
 medium or small, that way the yolk will slide down WAY easier, i cant chug big eggs either</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -768,8 +829,8 @@ medium or small, that way the yolk will slide down WAY easier, i cant chug big e
     <div class="comment-text">Don’t drink the egg white just cook it snd put raw yolk on top</div>
     <div class="comment-meta">
       <span>1 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -780,8 +841,8 @@ medium or small, that way the yolk will slide down WAY easier, i cant chug big e
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -792,14 +853,15 @@ medium or small, that way the yolk will slide down WAY easier, i cant chug big e
     <div class="comment-text">Omg your hair!!!! So cute</div>
     <div class="comment-meta">
       <span>2 likes</span>
-      <span>1 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@canthinkyy" target="_blank" rel="noopener">canthinky</a></div>
-          <div class="comment-text">thank you!!</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 1 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@canthinkyy" target="_blank" rel="noopener">canthinky</a></div>
+          <div class="reply-text">thank you!!</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -811,8 +873,8 @@ medium or small, that way the yolk will slide down WAY easier, i cant chug big e
     <div class="comment-text">mix it in with milk</div>
     <div class="comment-meta">
       <span>2 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -823,14 +885,15 @@ medium or small, that way the yolk will slide down WAY easier, i cant chug big e
     <div class="comment-text">[Sticker] raw egg?</div>
     <div class="comment-meta">
       <span>10 likes</span>
-      <span>1 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@canthinkyy" target="_blank" rel="noopener">canthinky</a></div>
-          <div class="comment-text">yes bro…</div>
-          <div class="comment-meta"><span>3 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 1 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@canthinkyy" target="_blank" rel="noopener">canthinky</a></div>
+          <div class="reply-text">yes bro…</div>
+          <div class="reply-meta"><span>3 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -842,8 +905,8 @@ medium or small, that way the yolk will slide down WAY easier, i cant chug big e
     <div class="comment-text">Raw eggs is the easiest try bloo</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -854,8 +917,8 @@ medium or small, that way the yolk will slide down WAY easier, i cant chug big e
     <div class="comment-text">U get used to it, but it’s easier to start with just yolks</div>
     <div class="comment-meta">
       <span>1 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -866,8 +929,8 @@ medium or small, that way the yolk will slide down WAY easier, i cant chug big e
     <div class="comment-text">Add the raw yolk to a glass of milk and mix</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -878,8 +941,8 @@ medium or small, that way the yolk will slide down WAY easier, i cant chug big e
     <div class="comment-text">you don’t drink the white 😭😭</div>
     <div class="comment-meta">
       <span>4 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -890,8 +953,8 @@ medium or small, that way the yolk will slide down WAY easier, i cant chug big e
     <div class="comment-text">Raw eggs are not even that good cuz of the antinutrients in the egg whites eat just the yolk</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -902,8 +965,8 @@ medium or small, that way the yolk will slide down WAY easier, i cant chug big e
     <div class="comment-text">Cook the whites and leave the yolk runny then, its fine its one of the least important things to eat raw on the diet</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -914,8 +977,8 @@ medium or small, that way the yolk will slide down WAY easier, i cant chug big e
     <div class="comment-text">1. don&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;t eat the whites 2. mix it in milk</div>
     <div class="comment-meta">
       <span>2 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -926,8 +989,8 @@ medium or small, that way the yolk will slide down WAY easier, i cant chug big e
     <div class="comment-text">yasye great</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -938,8 +1001,8 @@ medium or small, that way the yolk will slide down WAY easier, i cant chug big e
     <div class="comment-text">lol</div>
     <div class="comment-meta">
       <span>18 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -950,8 +1013,8 @@ medium or small, that way the yolk will slide down WAY easier, i cant chug big e
     <div class="comment-text">I like it in my coffee or with milk. Generally if u never ate it before it will be hard at the start</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -962,8 +1025,8 @@ medium or small, that way the yolk will slide down WAY easier, i cant chug big e
     <div class="comment-text">What went wrong</div>
     <div class="comment-meta">
       <span>4 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -974,8 +1037,8 @@ medium or small, that way the yolk will slide down WAY easier, i cant chug big e
     <div class="comment-text">U get used to it</div>
     <div class="comment-meta">
       <span>2 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -986,8 +1049,8 @@ medium or small, that way the yolk will slide down WAY easier, i cant chug big e
     <div class="comment-text">How do I separate the whites from the yolk?</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -998,8 +1061,8 @@ medium or small, that way the yolk will slide down WAY easier, i cant chug big e
     <div class="comment-text">orange juice with raw yolks you must try bb its so good</div>
     <div class="comment-meta">
       <span>2 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -1010,8 +1073,8 @@ medium or small, that way the yolk will slide down WAY easier, i cant chug big e
     <div class="comment-text">Just eat the yolks! They taste amazing and are super healthy. The whites not so much…</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -1022,8 +1085,8 @@ medium or small, that way the yolk will slide down WAY easier, i cant chug big e
     <div class="comment-text">Ur so cool I wish we could be friends 💔</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -1034,8 +1097,8 @@ medium or small, that way the yolk will slide down WAY easier, i cant chug big e
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>2 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -1046,8 +1109,8 @@ medium or small, that way the yolk will slide down WAY easier, i cant chug big e
     <div class="comment-text">Egg whites🫩</div>
     <div class="comment-meta">
       <span>1 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -1058,8 +1121,8 @@ medium or small, that way the yolk will slide down WAY easier, i cant chug big e
     <div class="comment-text">found out abt this yesterday</div>
     <div class="comment-meta">
       <span>2 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -1071,8 +1134,8 @@ medium or small, that way the yolk will slide down WAY easier, i cant chug big e
 egg whites not needed</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -1083,8 +1146,8 @@ egg whites not needed</div>
     <div class="comment-text">its very easy after you start doing it often, but you can separate the egg whites in any case</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -1095,8 +1158,8 @@ egg whites not needed</div>
     <div class="comment-text">You gotta swish it around in your mouth to break the yolk</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -1107,8 +1170,8 @@ egg whites not needed</div>
     <div class="comment-text">the white slimeys are disguisting I like to just drink yolk with milk</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -1119,8 +1182,8 @@ egg whites not needed</div>
     <div class="comment-text">only yolk</div>
     <div class="comment-meta">
       <span>6 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -1131,8 +1194,8 @@ egg whites not needed</div>
     <div class="comment-text">just cook the egg whites</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -1143,8 +1206,8 @@ egg whites not needed</div>
     <div class="comment-text">Add milk</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -1155,8 +1218,8 @@ egg whites not needed</div>
     <div class="comment-text">Like the way you jus tdid it</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>

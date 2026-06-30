@@ -83,6 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Mute/unmute
+  var unmuteTop = document.getElementById('unmuteTop');
   if (muteBtn) {
     video.muted = true;
     muteBtn.addEventListener('click', function(e) {
@@ -90,6 +91,16 @@ document.addEventListener('DOMContentLoaded', function() {
       video.muted = !video.muted;
       if (unmuteIcon) unmuteIcon.style.display = video.muted ? '' : 'none';
       if (muteIcon) muteIcon.style.display = video.muted ? 'none' : '';
+      if (unmuteTop) unmuteTop.classList.toggle('hidden', !video.muted);
+    });
+  }
+  if (unmuteTop) {
+    unmuteTop.addEventListener('click', function(e) {
+      e.stopPropagation();
+      video.muted = false;
+      if (unmuteIcon) unmuteIcon.style.display = 'none';
+      if (muteIcon) muteIcon.style.display = '';
+      unmuteTop.classList.add('hidden');
     });
   }
 

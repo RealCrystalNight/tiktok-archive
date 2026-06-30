@@ -86,6 +86,10 @@
     <div class="player-overlay" id="playerOverlay">
       <svg class="play-icon" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
     </div>
+    <button class="unmute-top" id="unmuteTop" title="Click to unmute">
+      <svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+      <span>Unmute</span>
+    </button>
     <div class="player-controls" id="playerControls">
       <div class="progress-bar" id="progressBar"><div class="progress-fill" id="progressFill"></div></div>
       <div class="controls-row">
@@ -152,28 +156,31 @@
     <div class="comment-text">Illya😭💢</div>
     <div class="comment-meta">
       <span>15 likes</span>
-      <span>3 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@coolrobloxgaming123" target="_blank" rel="noopener">ᨳ𐔌՞҂ ˕ ֊՞𐦯ᜊ</a></div>
-          <div class="comment-text">Pdf</div>
-          <div class="comment-meta"><span>6 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 3 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@coolrobloxgaming123" target="_blank" rel="noopener">ᨳ𐔌՞҂ ˕ ֊՞𐦯ᜊ</a></div>
+          <div class="reply-text">Pdf</div>
+          <div class="reply-meta"><span>6 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@fatherchulzz" target="_blank" rel="noopener">postlobo08</a></div>
-          <div class="comment-text">I’m done…</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@fatherchulzz" target="_blank" rel="noopener">postlobo08</a></div>
+          <div class="reply-text">I’m done…</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@toggle.g" target="_blank" rel="noopener">romanskivampir</a></div>
-          <div class="comment-text">&quot;dad why do i smell like this&quot;</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@toggle.g" target="_blank" rel="noopener">romanskivampir</a></div>
+          <div class="reply-text">&quot;dad why do i smell like this&quot;</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -185,8 +192,8 @@
     <div class="comment-text">cute sweet angel</div>
     <div class="comment-meta">
       <span>1 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -197,8 +204,8 @@
     <div class="comment-text">u fr</div>
     <div class="comment-meta">
       <span>1 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -209,8 +216,8 @@
     <div class="comment-text">ILLYASVIEL 😭😭😭😭😭😭</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -221,8 +228,8 @@
     <div class="comment-text">Can we please get a makeup tutorial ur my inspiration 😞😞</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -233,8 +240,8 @@
     <div class="comment-text">Like an angel</div>
     <div class="comment-meta">
       <span>1 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -245,8 +252,8 @@
     <div class="comment-text">ethereal💯</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -257,8 +264,8 @@
     <div class="comment-text">Nice cosplay</div>
     <div class="comment-meta">
       <span>4 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -269,8 +276,8 @@
     <div class="comment-text">omg illya!! so adorable</div>
     <div class="comment-meta">
       <span>1 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -281,8 +288,8 @@
     <div class="comment-text">angelic</div>
     <div class="comment-meta">
       <span>1 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -293,8 +300,8 @@
     <div class="comment-text">😭 I guess this is peak but bro</div>
     <div class="comment-meta">
       <span>1 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -305,8 +312,8 @@
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -317,8 +324,8 @@
     <div class="comment-text">👌</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -329,8 +336,8 @@
     <div class="comment-text">👏🥹</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -341,8 +348,8 @@
     <div class="comment-text">🥰</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -353,8 +360,8 @@
     <div class="comment-text"><a href="https://www.tiktok.com/@Windbeater" target="_blank" rel="noopener">@Windbeater</a> ♡ Twitch Streamer ♡</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -365,8 +372,8 @@
     <div class="comment-text">❤️❤️❤️</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>

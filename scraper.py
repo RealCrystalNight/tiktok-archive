@@ -182,6 +182,7 @@ def get_comments(video_url: str, video_id: str) -> list[dict]:
                             "likes": r.get("digg_count", 0),
                             "user": r.get("user", {}).get("unique_id", ""),
                             "nickname": r.get("user", {}).get("nickname", ""),
+                            "avatar": (r.get("user", {}).get("avatar_thumb", {}) or {}).get("url_list", [""])[0],
                         })
                     if not rresp.get("has_more"):
                         break

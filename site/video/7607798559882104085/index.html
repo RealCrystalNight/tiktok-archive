@@ -86,6 +86,10 @@
     <div class="player-overlay" id="playerOverlay">
       <svg class="play-icon" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
     </div>
+    <button class="unmute-top" id="unmuteTop" title="Click to unmute">
+      <svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+      <span>Unmute</span>
+    </button>
     <div class="player-controls" id="playerControls">
       <div class="progress-bar" id="progressBar"><div class="progress-fill" id="progressFill"></div></div>
       <div class="controls-row">
@@ -152,56 +156,63 @@
     <div class="comment-text">How can people like leaf after everything</div>
     <div class="comment-meta">
       <span>29 likes</span>
-      <span>7 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@caprotarnished" target="_blank" rel="noopener">Capro</a></div>
-          <div class="comment-text">in black souls 1 leaf looks like the villain but in black souls 2 alice is the true villain</div>
-          <div class="comment-meta"><span>3 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 7 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@caprotarnished" target="_blank" rel="noopener">Capro</a></div>
+          <div class="reply-text">in black souls 1 leaf looks like the villain but in black souls 2 alice is the true villain</div>
+          <div class="reply-meta"><span>3 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@k3ivis0n" target="_blank" rel="noopener">Keivison Geladinhos da Silva</a></div>
-          <div class="comment-text">fr, but leaf still a jerk</div>
-          <div class="comment-meta"><span>2 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@k3ivis0n" target="_blank" rel="noopener">Keivison Geladinhos da Silva</a></div>
+          <div class="reply-text">fr, but leaf still a jerk</div>
+          <div class="reply-meta"><span>2 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@mcsoggs2er" target="_blank" rel="noopener">McSoggs2er</a></div>
-          <div class="comment-text">The Crawling One is the true villain using Alice as a vessel for Grimm to chase after due to Lewis’ affection to the real Alice. I would still argue Leaf is still worse because she’s the one that technically started it all. The Crawling One just benefited off of the chaos from Leaf’s doing</div>
-          <div class="comment-meta"><span>1 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@mcsoggs2er" target="_blank" rel="noopener">McSoggs2er</a></div>
+          <div class="reply-text">The Crawling One is the true villain using Alice as a vessel for Grimm to chase after due to Lewis’ affection to the real Alice. I would still argue Leaf is still worse because she’s the one that technically started it all. The Crawling One just benefited off of the chaos from Leaf’s doing</div>
+          <div class="reply-meta"><span>1 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@cyrnoscp" target="_blank" rel="noopener">CyrnoSCP</a></div>
-          <div class="comment-text">leaf is worst Than alice</div>
-          <div class="comment-meta"><span>3 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@cyrnoscp" target="_blank" rel="noopener">CyrnoSCP</a></div>
+          <div class="reply-text">leaf is worst Than alice</div>
+          <div class="reply-meta"><span>3 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@caprotarnished" target="_blank" rel="noopener">Capro</a></div>
-          <div class="comment-text">alice doesn&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;t exist bro, alice was fragmented in carrol&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;s house and prickett was the most human fragment. Leaf was abandoned by baphomet and jabber used her as revenge and entretaiment</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@caprotarnished" target="_blank" rel="noopener">Capro</a></div>
+          <div class="reply-text">alice doesn&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;t exist bro, alice was fragmented in carrol&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;s house and prickett was the most human fragment. Leaf was abandoned by baphomet and jabber used her as revenge and entretaiment</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@quixspw" target="_blank" rel="noopener">quix/arav</a></div>
-          <div class="comment-text">she did nothing wrong</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@quixspw" target="_blank" rel="noopener">quix/arav</a></div>
+          <div class="reply-text">she did nothing wrong</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@silver39392" target="_blank" rel="noopener">Silver</a></div>
-          <div class="comment-text">Dude ask flappy</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@silver39392" target="_blank" rel="noopener">Silver</a></div>
+          <div class="reply-text">Dude ask flappy</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -213,28 +224,31 @@
     <div class="comment-text">Maybe leaf did nothing wrong.</div>
     <div class="comment-meta">
       <span>131 likes</span>
-      <span>3 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@berkut_11161" target="_blank" rel="noopener">𝐁𝐞𝐫𝐤𝐮𝐭[Fated]🌹</a></div>
-          <div class="comment-text">dont fall for the propaganda</div>
-          <div class="comment-meta"><span>20 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 3 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@berkut_11161" target="_blank" rel="noopener">𝐁𝐞𝐫𝐤𝐮𝐭[Fated]🌹</a></div>
+          <div class="reply-text">dont fall for the propaganda</div>
+          <div class="reply-meta"><span>20 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@zenzen1780" target="_blank" rel="noopener">Zeny</a></div>
-          <div class="comment-text">whos nothing and why did they do them wrong</div>
-          <div class="comment-meta"><span>9 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@zenzen1780" target="_blank" rel="noopener">Zeny</a></div>
+          <div class="reply-text">whos nothing and why did they do them wrong</div>
+          <div class="reply-meta"><span>9 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@halolahya.unofficial" target="_blank" rel="noopener">Halolahya Unofficial</a></div>
-          <div class="comment-text">I HATE LEAF.</div>
-          <div class="comment-meta"><span>1 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@halolahya.unofficial" target="_blank" rel="noopener">Halolahya Unofficial</a></div>
+          <div class="reply-text">I HATE LEAF.</div>
+          <div class="reply-meta"><span>1 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -246,21 +260,23 @@
     <div class="comment-text">Song ?</div>
     <div class="comment-meta">
       <span>1 likes</span>
-      <span>2 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@tukimita10" target="_blank" rel="noopener">Uyane♫</a></div>
-          <div class="comment-text">Это не песня</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 2 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@tukimita10" target="_blank" rel="noopener">Uyane♫</a></div>
+          <div class="reply-text">Это не песня</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@el_prisas_uwu" target="_blank" rel="noopener">Manuel Romero</a></div>
-          <div class="comment-text">Shadow Mirrors - black souls 2</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@el_prisas_uwu" target="_blank" rel="noopener">Manuel Romero</a></div>
+          <div class="reply-text">Shadow Mirrors - black souls 2</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -272,14 +288,15 @@
     <div class="comment-text">leaf is best girl idc what anyone said.</div>
     <div class="comment-meta">
       <span>5 likes</span>
-      <span>1 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@bodie.707" target="_blank" rel="noopener">🐇⏱️</a></div>
-          <div class="comment-text">Bro 😭</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 1 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@bodie.707" target="_blank" rel="noopener">🐇⏱️</a></div>
+          <div class="reply-text">Bro 😭</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -291,21 +308,23 @@
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>0 likes</span>
-      <span>2 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@tukimita10" target="_blank" rel="noopener">Uyane♫</a></div>
-          <div class="comment-text">[Sticker] hola papu</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 2 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@tukimita10" target="_blank" rel="noopener">Uyane♫</a></div>
+          <div class="reply-text">[Sticker] hola papu</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@tukimita10" target="_blank" rel="noopener">Uyane♫</a></div>
-          <div class="comment-text">[Sticker] ozi ozi riko</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@tukimita10" target="_blank" rel="noopener">Uyane♫</a></div>
+          <div class="reply-text">[Sticker] ozi ozi riko</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -317,14 +336,15 @@
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>25 likes</span>
-      <span>1 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@dxrhxnt.m" target="_blank" rel="noopener">.</a></div>
-          <div class="comment-text"><a href="https://www.tiktok.com/@alekira" target="_blank" rel="noopener">@alekira</a> JAJAJJAJAJA</div>
-          <div class="comment-meta"><span>1 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 1 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@dxrhxnt.m" target="_blank" rel="noopener">.</a></div>
+          <div class="reply-text"><a href="https://www.tiktok.com/@alekira" target="_blank" rel="noopener">@alekira</a> JAJAJJAJAJA</div>
+          <div class="reply-meta"><span>1 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -336,8 +356,8 @@
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>6 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -348,8 +368,8 @@
     <div class="comment-text">Mabel forever</div>
     <div class="comment-meta">
       <span>70 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -360,8 +380,8 @@
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>238 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -372,8 +392,8 @@
     <div class="comment-text">лучший косплей</div>
     <div class="comment-meta">
       <span>2 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -384,8 +404,8 @@
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -396,8 +416,8 @@
     <div class="comment-text">Can i feed you souls ?</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -408,8 +428,8 @@
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>11 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -420,8 +440,8 @@
     <div class="comment-text">i love you mary sue</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -432,8 +452,8 @@
     <div class="comment-text">is betrayal a form of love for you</div>
     <div class="comment-meta">
       <span>45 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -444,8 +464,8 @@
     <div class="comment-text">Thank you for your Black Souls cosplay. It’s art.🙏🏻🙏🏻🙏🏻</div>
     <div class="comment-meta">
       <span>10 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -456,8 +476,8 @@
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>1 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -468,8 +488,8 @@
     <div class="comment-text">How to hear voices of characters in bs1 and bs2?</div>
     <div class="comment-meta">
       <span>2 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -480,8 +500,8 @@
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>15 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -492,8 +512,8 @@
     <div class="comment-text">what is mary sue doing 😭</div>
     <div class="comment-meta">
       <span>3 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -504,8 +524,8 @@
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>44 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -516,8 +536,8 @@
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>8 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -528,8 +548,8 @@
     <div class="comment-text">Leaf best girl</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -540,8 +560,8 @@
     <div class="comment-text">leaf did nothing wrong</div>
     <div class="comment-meta">
       <span>1 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -552,8 +572,8 @@
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>4 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -564,8 +584,8 @@
     <div class="comment-text">Suspicious square in the Minecraft sky tonight</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -576,8 +596,8 @@
     <div class="comment-text">leaf best♥️</div>
     <div class="comment-meta">
       <span>2 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -588,8 +608,8 @@
     <div class="comment-text">[Sticker] where is alice?</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -600,8 +620,8 @@
     <div class="comment-text">what if the girl i want you?🥸</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -612,8 +632,8 @@
     <div class="comment-text">you are beautiful😍</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -624,8 +644,8 @@
     <div class="comment-text">[Sticker] this you?</div>
     <div class="comment-meta">
       <span>1 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -636,35 +656,39 @@
     <div class="comment-text">Лист ничего плохо не скажет</div>
     <div class="comment-meta">
       <span>66 likes</span>
-      <span>6 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@bubnakubu" target="_blank" rel="noopener">обложка книги</a></div>
-          <div class="comment-text">ты там с переводчиком сидишь?</div>
-          <div class="comment-meta"><span>2 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 6 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@bubnakubu" target="_blank" rel="noopener">обложка книги</a></div>
+          <div class="reply-text">ты там с переводчиком сидишь?</div>
+          <div class="reply-meta"><span>2 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@son_of_pupsik" target="_blank" rel="noopener">Pupsik</a></div>
-          <div class="comment-text">да не, вроде как обычно пишу вроде</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@son_of_pupsik" target="_blank" rel="noopener">Pupsik</a></div>
+          <div class="reply-text">да не, вроде как обычно пишу вроде</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@bubnakubu" target="_blank" rel="noopener">обложка книги</a></div>
-          <div class="comment-text">почему лист</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@bubnakubu" target="_blank" rel="noopener">обложка книги</a></div>
+          <div class="reply-text">почему лист</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@hillpols" target="_blank" rel="noopener">hillpols</a></div>
-          <div class="comment-text">Потомучто коровка муму</div>
-          <div class="comment-meta"><span>5 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@hillpols" target="_blank" rel="noopener">hillpols</a></div>
+          <div class="reply-text">Потомучто коровка муму</div>
+          <div class="reply-meta"><span>5 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -676,8 +700,8 @@
     <div class="comment-text">hello</div>
     <div class="comment-meta">
       <span>1 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -688,8 +712,8 @@
     <div class="comment-text">one must imagine grimm happy😮‍💨</div>
     <div class="comment-meta">
       <span>3 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -700,8 +724,8 @@
     <div class="comment-text">where My Alice</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -712,8 +736,8 @@
     <div class="comment-text">Play black souls 👍</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -724,8 +748,8 @@
     <div class="comment-text">v cute</div>
     <div class="comment-meta">
       <span>1 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -736,8 +760,8 @@
     <div class="comment-text">omg hi kay 🤠</div>
     <div class="comment-meta">
       <span>1 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -748,8 +772,8 @@
     <div class="comment-text">how cute</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -760,8 +784,8 @@
     <div class="comment-text">this is magnificent</div>
     <div class="comment-meta">
       <span>2 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -772,8 +796,8 @@
     <div class="comment-text">ищу алису</div>
     <div class="comment-meta">
       <span>2 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -784,28 +808,31 @@
     <div class="comment-text">кста почему во 2 части у неё другой цвет волос а когда ты взаимодействуешь с ней то волосы обратно зелёными становятся</div>
     <div class="comment-meta">
       <span>1 likes</span>
-      <span>3 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@psychoma" target="_blank" rel="noopener">AAVE</a></div>
-          <div class="comment-text">где у ее всегда волосы зелёные</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 3 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@psychoma" target="_blank" rel="noopener">AAVE</a></div>
+          <div class="reply-text">где у ее всегда волосы зелёные</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@suppperhuman" target="_blank" rel="noopener">MeL._.</a></div>
-          <div class="comment-text">во 2 части когда ты её находишь в квисленде то у неё волосы голубые</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@suppperhuman" target="_blank" rel="noopener">MeL._.</a></div>
+          <div class="reply-text">во 2 части когда ты её находишь в квисленде то у неё волосы голубые</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@psychoma" target="_blank" rel="noopener">AAVE</a></div>
-          <div class="comment-text">хз у меня зелёный были скинь скрин</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@psychoma" target="_blank" rel="noopener">AAVE</a></div>
+          <div class="reply-text">хз у меня зелёный были скинь скрин</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -817,8 +844,8 @@
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -829,8 +856,8 @@
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -841,8 +868,8 @@
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -853,8 +880,8 @@
     <div class="comment-text">[Sticker] las multicuentas de leaf</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -865,8 +892,8 @@
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>8 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -877,8 +904,8 @@
     <div class="comment-text">[Sticker] prepárate leaf... todos mis parámetros ahora están en infinito.</div>
     <div class="comment-meta">
       <span>4 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -889,8 +916,8 @@
     <div class="comment-text">Дайте текст на англ</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -901,8 +928,8 @@
     <div class="comment-text">спасибо, в суде включу</div>
     <div class="comment-meta">
       <span>1 likes</span>
-      
     </div>
+    
     
   </div>
 </div>

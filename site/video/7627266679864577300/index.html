@@ -86,6 +86,10 @@
     <div class="player-overlay" id="playerOverlay">
       <svg class="play-icon" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
     </div>
+    <button class="unmute-top" id="unmuteTop" title="Click to unmute">
+      <svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+      <span>Unmute</span>
+    </button>
     <div class="player-controls" id="playerControls">
       <div class="progress-bar" id="progressBar"><div class="progress-fill" id="progressFill"></div></div>
       <div class="controls-row">
@@ -152,35 +156,39 @@
     <div class="comment-text">I feel like we’re in a new age of canthinky. Healthier and happier 🙏🤙</div>
     <div class="comment-meta">
       <span>84 likes</span>
-      <span>4 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@cakethief2002" target="_blank" rel="noopener">cakethief</a></div>
-          <div class="comment-text">she&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;s literally cosplaying Chris Chan bro😂</div>
-          <div class="comment-meta"><span>33 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 4 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@cakethief2002" target="_blank" rel="noopener">cakethief</a></div>
+          <div class="reply-text">she&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;s literally cosplaying Chris Chan bro😂</div>
+          <div class="reply-meta"><span>33 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@got_lost6" target="_blank" rel="noopener">Liege of Orléans</a></div>
-          <div class="comment-text">Yeah but she’s not ⚡️⚡️anymore so it’s healthy in comparison</div>
-          <div class="comment-meta"><span>13 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@got_lost6" target="_blank" rel="noopener">Liege of Orléans</a></div>
+          <div class="reply-text">Yeah but she’s not ⚡️⚡️anymore so it’s healthy in comparison</div>
+          <div class="reply-meta"><span>13 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@moidsleyinexile" target="_blank" rel="noopener">moidsley</a></div>
-          <div class="comment-text">Bros keeping up with the life of an internet femboy 😭😭 holy parasocial</div>
-          <div class="comment-meta"><span>3 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@moidsleyinexile" target="_blank" rel="noopener">moidsley</a></div>
+          <div class="reply-text">Bros keeping up with the life of an internet femboy 😭😭 holy parasocial</div>
+          <div class="reply-meta"><span>3 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@roadieelec6" target="_blank" rel="noopener">DJ</a></div>
-          <div class="comment-text">Truly is</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@roadieelec6" target="_blank" rel="noopener">DJ</a></div>
+          <div class="reply-text">Truly is</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -192,14 +200,15 @@
     <div class="comment-text">goreshit my beloved 💚🩵</div>
     <div class="comment-meta">
       <span>16 likes</span>
-      <span>1 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@alfiecollier0" target="_blank" rel="noopener">Alfie C (Masayoshis version)</a></div>
-          <div class="comment-text"></div>
-          <div class="comment-meta"><span>0 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 1 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@alfiecollier0" target="_blank" rel="noopener">Alfie C (Masayoshis version)</a></div>
+          <div class="reply-text"></div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -211,14 +220,15 @@
     <div class="comment-text">Can I be your Barbara?</div>
     <div class="comment-meta">
       <span>1 likes</span>
-      <span>1 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@imdismal" target="_blank" rel="noopener">12 Stout Street</a></div>
-          <div class="comment-text">🫩</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 1 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@imdismal" target="_blank" rel="noopener">12 Stout Street</a></div>
+          <div class="reply-text">🫩</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -230,14 +240,15 @@
     <div class="comment-text">Whats ur opinion on communism</div>
     <div class="comment-meta">
       <span>4 likes</span>
-      <span>2 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@heywood16" target="_blank" rel="noopener">😎</a></div>
-          <div class="comment-text">I&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;M A SOCIALIST! (national)</div>
-          <div class="comment-meta"><span>43 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 2 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@heywood16" target="_blank" rel="noopener">😎</a></div>
+          <div class="reply-text">I&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;M A SOCIALIST! (national)</div>
+          <div class="reply-meta"><span>43 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -249,8 +260,8 @@
     <div class="comment-text">where can you buy that?</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -261,8 +272,8 @@
     <div class="comment-text">It found a new vessel</div>
     <div class="comment-meta">
       <span>1 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -273,8 +284,8 @@
     <div class="comment-text">How did you do that camera effect?</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -285,8 +296,8 @@
     <div class="comment-text">Why is this vid an hour long...</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -297,8 +308,8 @@
     <div class="comment-text">Do you realise</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -309,8 +320,8 @@
     <div class="comment-text">[Sticker] the video</div>
     <div class="comment-meta">
       <span>1 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -321,8 +332,8 @@
     <div class="comment-text">is this one of the ogs ?</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -333,8 +344,8 @@
     <div class="comment-text">w larps</div>
     <div class="comment-meta">
       <span>3 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -345,8 +356,8 @@
     <div class="comment-text">i&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;m working on it!</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -357,8 +368,8 @@
     <div class="comment-text">do u have an actual medallion ohmygod 😭</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -369,8 +380,8 @@
     <div class="comment-text">can anything be as cute</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -382,8 +393,8 @@
 amulet has found new vessel😶😰</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -394,8 +405,8 @@ amulet has found new vessel😶😰</div>
     <div class="comment-text">When the dreams are peaceful</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -406,8 +417,8 @@ amulet has found new vessel😶😰</div>
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -418,8 +429,8 @@ amulet has found new vessel😶😰</div>
     <div class="comment-text">Larppp</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -430,8 +441,8 @@ amulet has found new vessel😶😰</div>
     <div class="comment-text">fave</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -442,8 +453,8 @@ amulet has found new vessel😶😰</div>
     <div class="comment-text">SONICHU????!!!</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -454,8 +465,8 @@ amulet has found new vessel😶😰</div>
     <div class="comment-text">CANTHINKY OVERLOAD!!💗💗💗</div>
     <div class="comment-meta">
       <span>2 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -466,8 +477,8 @@ amulet has found new vessel😶😰</div>
     <div class="comment-text">fogo 🔥</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -478,8 +489,8 @@ amulet has found new vessel😶😰</div>
     <div class="comment-text">perfect yeah</div>
     <div class="comment-meta">
       <span>1 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -490,8 +501,8 @@ amulet has found new vessel😶😰</div>
     <div class="comment-text">fire 🔥</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -502,8 +513,8 @@ amulet has found new vessel😶😰</div>
     <div class="comment-text">криис чааан классс</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -514,8 +525,8 @@ amulet has found new vessel😶😰</div>
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -526,8 +537,8 @@ amulet has found new vessel😶😰</div>
     <div class="comment-text">это твоя настоящая прическа?</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -538,8 +549,8 @@ amulet has found new vessel😶😰</div>
     <div class="comment-text">Давай встречаться</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -550,8 +561,8 @@ amulet has found new vessel😶😰</div>
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>1 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -562,8 +573,8 @@ amulet has found new vessel😶😰</div>
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -574,8 +585,8 @@ amulet has found new vessel😶😰</div>
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -586,8 +597,8 @@ amulet has found new vessel😶😰</div>
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>9 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -598,8 +609,8 @@ amulet has found new vessel😶😰</div>
     <div class="comment-text">me encata</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -610,8 +621,8 @@ amulet has found new vessel😶😰</div>
     <div class="comment-text">Just awesome</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -622,8 +633,8 @@ amulet has found new vessel😶😰</div>
     <div class="comment-text">nice</div>
     <div class="comment-meta">
       <span>3 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -634,8 +645,8 @@ amulet has found new vessel😶😰</div>
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>1 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -646,8 +657,8 @@ amulet has found new vessel😶😰</div>
     <div class="comment-text">Holy larp</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -658,8 +669,8 @@ amulet has found new vessel😶😰</div>
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -670,8 +681,8 @@ amulet has found new vessel😶😰</div>
     <div class="comment-text">canthinkyy owns sonichu kandii? el oh el...</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -682,8 +693,8 @@ amulet has found new vessel😶😰</div>
     <div class="comment-text">prison transition is crazy</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -694,8 +705,8 @@ amulet has found new vessel😶😰</div>
     <div class="comment-text">🤣🤣🤣</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -706,8 +717,8 @@ amulet has found new vessel😶😰</div>
     <div class="comment-text">👍🏻👍🏻👍🏻</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -718,8 +729,8 @@ amulet has found new vessel😶😰</div>
     <div class="comment-text">💜💜💜</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -730,8 +741,8 @@ amulet has found new vessel😶😰</div>
     <div class="comment-text">😂😂😂</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -742,8 +753,8 @@ amulet has found new vessel😶😰</div>
     <div class="comment-text">😎👍</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -754,8 +765,8 @@ amulet has found new vessel😶😰</div>
     <div class="comment-text">🔥🔥</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>

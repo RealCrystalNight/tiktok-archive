@@ -86,6 +86,10 @@
     <div class="player-overlay" id="playerOverlay">
       <svg class="play-icon" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
     </div>
+    <button class="unmute-top" id="unmuteTop" title="Click to unmute">
+      <svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+      <span>Unmute</span>
+    </button>
     <div class="player-controls" id="playerControls">
       <div class="progress-bar" id="progressBar"><div class="progress-fill" id="progressFill"></div></div>
       <div class="controls-row">
@@ -152,63 +156,71 @@
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>649 likes</span>
-      <span>28 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@borogrove22" target="_blank" rel="noopener">mome-rath</a></div>
-          <div class="comment-text"></div>
-          <div class="comment-meta"><span>28 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 28 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@borogrove22" target="_blank" rel="noopener">mome-rath</a></div>
+          <div class="reply-text"></div>
+          <div class="reply-meta"><span>28 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@ej6drips" target="_blank" rel="noopener">dizzy-ej</a></div>
-          <div class="comment-text"></div>
-          <div class="comment-meta"><span>10 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@ej6drips" target="_blank" rel="noopener">dizzy-ej</a></div>
+          <div class="reply-text"></div>
+          <div class="reply-meta"><span>10 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@meme_lord1776" target="_blank" rel="noopener">MEME LORD</a></div>
-          <div class="comment-text">[Sticker] </div>
-          <div class="comment-meta"><span>12 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@meme_lord1776" target="_blank" rel="noopener">MEME LORD</a></div>
+          <div class="reply-text">[Sticker] </div>
+          <div class="reply-meta"><span>12 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@user4yptjdlrre" target="_blank" rel="noopener">user57396383163</a></div>
-          <div class="comment-text">[Sticker] </div>
-          <div class="comment-meta"><span>2 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@user4yptjdlrre" target="_blank" rel="noopener">user57396383163</a></div>
+          <div class="reply-text">[Sticker] </div>
+          <div class="reply-meta"><span>2 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@allcaps.allcaps1" target="_blank" rel="noopener">Allcaps</a></div>
-          <div class="comment-text">[Sticker] </div>
-          <div class="comment-meta"><span>1 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@allcaps.allcaps1" target="_blank" rel="noopener">Allcaps</a></div>
+          <div class="reply-text">[Sticker] </div>
+          <div class="reply-meta"><span>1 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@floppa.floppa013" target="_blank" rel="noopener">⌖floppa🫒𝍎𝌆</a></div>
-          <div class="comment-text">[Sticker] </div>
-          <div class="comment-meta"><span>1 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@floppa.floppa013" target="_blank" rel="noopener">⌖floppa🫒𝍎𝌆</a></div>
+          <div class="reply-text">[Sticker] </div>
+          <div class="reply-meta"><span>1 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@pszczelakttw" target="_blank" rel="noopener">Pszczelak</a></div>
-          <div class="comment-text">[Sticker] </div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@pszczelakttw" target="_blank" rel="noopener">Pszczelak</a></div>
+          <div class="reply-text">[Sticker] </div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@ej6drips" target="_blank" rel="noopener">dizzy-ej</a></div>
-          <div class="comment-text"></div>
-          <div class="comment-meta"><span>13 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@ej6drips" target="_blank" rel="noopener">dizzy-ej</a></div>
+          <div class="reply-text"></div>
+          <div class="reply-meta"><span>13 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -220,21 +232,23 @@
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>4 likes</span>
-      <span>2 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@caviidae3" target="_blank" rel="noopener">caviidae</a></div>
-          <div class="comment-text">[Sticker] your pfp</div>
-          <div class="comment-meta"><span>1 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 2 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@caviidae3" target="_blank" rel="noopener">caviidae</a></div>
+          <div class="reply-text">[Sticker] your pfp</div>
+          <div class="reply-meta"><span>1 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@51larper271k" target="_blank" rel="noopener">⩩</a></div>
-          <div class="comment-text">[Sticker] indian hands wrote this</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@51larper271k" target="_blank" rel="noopener">⩩</a></div>
+          <div class="reply-text">[Sticker] indian hands wrote this</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -246,14 +260,15 @@
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>8 likes</span>
-      <span>1 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@mumuluxx27" target="_blank" rel="noopener">mumu</a></div>
-          <div class="comment-text">fishy ashh</div>
-          <div class="comment-meta"><span>2 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 1 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@mumuluxx27" target="_blank" rel="noopener">mumu</a></div>
+          <div class="reply-text">fishy ashh</div>
+          <div class="reply-meta"><span>2 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -265,21 +280,23 @@
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>69 likes</span>
-      <span>2 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@asstriaz" target="_blank" rel="noopener">asstriaz</a></div>
-          <div class="comment-text">commietard</div>
-          <div class="comment-meta"><span>3 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 2 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@asstriaz" target="_blank" rel="noopener">asstriaz</a></div>
+          <div class="reply-text">commietard</div>
+          <div class="reply-meta"><span>3 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@mumuluxx27" target="_blank" rel="noopener">mumu</a></div>
-          <div class="comment-text">I don&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;t get it?</div>
-          <div class="comment-meta"><span>1 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@mumuluxx27" target="_blank" rel="noopener">mumu</a></div>
+          <div class="reply-text">I don&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;t get it?</div>
+          <div class="reply-meta"><span>1 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -291,8 +308,8 @@
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>30 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -303,8 +320,8 @@
     <div class="comment-text">what is it doing ?</div>
     <div class="comment-meta">
       <span>60 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -315,8 +332,8 @@
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>7 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -327,8 +344,8 @@
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>8 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -339,8 +356,8 @@
     <div class="comment-text">hello. you have a nicr garden</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -351,8 +368,8 @@
     <div class="comment-text">Negev cosplay next?</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -363,8 +380,8 @@
     <div class="comment-text">what is yo favorite nba team</div>
     <div class="comment-meta">
       <span>5 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -375,8 +392,8 @@
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -387,8 +404,8 @@
     <div class="comment-text">Bread</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -399,8 +416,8 @@
     <div class="comment-text">dope💯</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -411,8 +428,8 @@
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -423,8 +440,8 @@
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>1 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -435,8 +452,8 @@
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>10 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -447,8 +464,8 @@
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -459,8 +476,8 @@
     <div class="comment-text">[Sticker] Labubye</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -471,8 +488,8 @@
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>14 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -483,8 +500,8 @@
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -495,8 +512,8 @@
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -507,8 +524,8 @@
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>9 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -519,8 +536,8 @@
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>6 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -531,8 +548,8 @@
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>8 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -543,8 +560,8 @@
     <div class="comment-text">Looking for info please let me know anyone</div>
     <div class="comment-meta">
       <span>1 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -555,8 +572,8 @@
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>2 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -567,8 +584,8 @@
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>4 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -579,8 +596,8 @@
     <div class="comment-text">wonderful wonderful!</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -591,8 +608,8 @@
     <div class="comment-text">Get help</div>
     <div class="comment-meta">
       <span>9 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -603,91 +620,103 @@
     <div class="comment-text">Why people hatint</div>
     <div class="comment-meta">
       <span>6 likes</span>
-      <span>12 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@roycetxsnqd" target="_blank" rel="noopener">Royce</a></div>
-          <div class="comment-text">cuz she weird</div>
-          <div class="comment-meta"><span>86 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 12 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@roycetxsnqd" target="_blank" rel="noopener">Royce</a></div>
+          <div class="reply-text">cuz she weird</div>
+          <div class="reply-meta"><span>86 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@brainzzz__" target="_blank" rel="noopener">bubblezzz 🧟‍♀️🫧</a></div>
-          <div class="comment-text">thers a vid of her dancing to slurs.</div>
-          <div class="comment-meta"><span>86 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@brainzzz__" target="_blank" rel="noopener">bubblezzz 🧟‍♀️🫧</a></div>
+          <div class="reply-text">thers a vid of her dancing to slurs.</div>
+          <div class="reply-meta"><span>86 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@noobking5468" target="_blank" rel="noopener">NoobKing5468</a></div>
-          <div class="comment-text">Well there are really multiple, she just removed one of them</div>
-          <div class="comment-meta"><span>1 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@noobking5468" target="_blank" rel="noopener">NoobKing5468</a></div>
+          <div class="reply-text">Well there are really multiple, she just removed one of them</div>
+          <div class="reply-meta"><span>1 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@canthinkyy" target="_blank" rel="noopener">canthinky</a></div>
-          <div class="comment-text">nah one got taken down i will never back down</div>
-          <div class="comment-meta"><span>5 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@canthinkyy" target="_blank" rel="noopener">canthinky</a></div>
+          <div class="reply-text">nah one got taken down i will never back down</div>
+          <div class="reply-meta"><span>5 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@shalom8879" target="_blank" rel="noopener">shalom</a></div>
-          <div class="comment-text">You’ll survive.</div>
-          <div class="comment-meta"><span>3 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@shalom8879" target="_blank" rel="noopener">shalom</a></div>
+          <div class="reply-text">You’ll survive.</div>
+          <div class="reply-meta"><span>3 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@brainzzz__" target="_blank" rel="noopener">bubblezzz 🧟‍♀️🫧</a></div>
-          <div class="comment-text">bby no one said otherwise. 😁 I simply answered a question. get better comprehension skills!</div>
-          <div class="comment-meta"><span>4 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@brainzzz__" target="_blank" rel="noopener">bubblezzz 🧟‍♀️🫧</a></div>
+          <div class="reply-text">bby no one said otherwise. 😁 I simply answered a question. get better comprehension skills!</div>
+          <div class="reply-meta"><span>4 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@n8thegr8_56" target="_blank" rel="noopener">n8thegr8_56</a></div>
-          <div class="comment-text">that’s a good thing.</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@n8thegr8_56" target="_blank" rel="noopener">n8thegr8_56</a></div>
+          <div class="reply-text">that’s a good thing.</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@k_onlarper3000" target="_blank" rel="noopener">Piotr</a></div>
-          <div class="comment-text">[Sticker] Based</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@k_onlarper3000" target="_blank" rel="noopener">Piotr</a></div>
+          <div class="reply-text">[Sticker] Based</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@itz_zenno" target="_blank" rel="noopener">️￴ ￴ ￴ ￴ ￴￴￴￴ ￴￴￴￴ ￴</a></div>
-          <div class="comment-text">hatint</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@itz_zenno" target="_blank" rel="noopener">️￴ ￴ ￴ ￴ ￴￴￴￴ ￴￴￴￴ ￴</a></div>
+          <div class="reply-text">hatint</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@klxkln" target="_blank" rel="noopener">🕸️Аnтѳn🕸️</a></div>
-          <div class="comment-text">Oh noo a typo</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@klxkln" target="_blank" rel="noopener">🕸️Аnтѳn🕸️</a></div>
+          <div class="reply-text">Oh noo a typo</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@itz_zenno" target="_blank" rel="noopener">️￴ ￴ ￴ ￴ ￴￴￴￴ ￴￴￴￴ ￴</a></div>
-          <div class="comment-text">it&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;s been 4 days delete the comment and rewrite it</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@itz_zenno" target="_blank" rel="noopener">️￴ ￴ ￴ ￴ ￴￴￴￴ ￴￴￴￴ ￴</a></div>
+          <div class="reply-text">it&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;s been 4 days delete the comment and rewrite it</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@kirushvv" target="_blank" rel="noopener">kirushv</a></div>
-          <div class="comment-text">their feelings got hurt</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@kirushvv" target="_blank" rel="noopener">kirushv</a></div>
+          <div class="reply-text">their feelings got hurt</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -699,42 +728,47 @@
     <div class="comment-text">js happy to be a mess</div>
     <div class="comment-meta">
       <span>34 likes</span>
-      <span>5 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@sadgirl161616116161616" target="_blank" rel="noopener">e</a></div>
-          <div class="comment-text">shes not a mess</div>
-          <div class="comment-meta"><span>1 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 5 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@sadgirl161616116161616" target="_blank" rel="noopener">e</a></div>
+          <div class="reply-text">shes not a mess</div>
+          <div class="reply-meta"><span>1 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@hodontfindme07" target="_blank" rel="noopener">Liam</a></div>
-          <div class="comment-text">Look at the rest of the profile dawg</div>
-          <div class="comment-meta"><span>1 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@hodontfindme07" target="_blank" rel="noopener">Liam</a></div>
+          <div class="reply-text">Look at the rest of the profile dawg</div>
+          <div class="reply-meta"><span>1 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@sadgirl161616116161616" target="_blank" rel="noopener">e</a></div>
-          <div class="comment-text">idc about that stuff lmao</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@sadgirl161616116161616" target="_blank" rel="noopener">e</a></div>
+          <div class="reply-text">idc about that stuff lmao</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@hodontfindme07" target="_blank" rel="noopener">Liam</a></div>
-          <div class="comment-text">[Sticker] Sad for a reason 🫩</div>
-          <div class="comment-meta"><span>4 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@hodontfindme07" target="_blank" rel="noopener">Liam</a></div>
+          <div class="reply-text">[Sticker] Sad for a reason 🫩</div>
+          <div class="reply-meta"><span>4 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@caviidae3" target="_blank" rel="noopener">caviidae</a></div>
-          <div class="comment-text">[Sticker] </div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@caviidae3" target="_blank" rel="noopener">caviidae</a></div>
+          <div class="reply-text">[Sticker] </div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -746,21 +780,23 @@
     <div class="comment-text">never beating the allegations</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      <span>2 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@jay256988" target="_blank" rel="noopener">jay256988</a></div>
-          <div class="comment-text">Who cares😂</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 2 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@jay256988" target="_blank" rel="noopener">jay256988</a></div>
+          <div class="reply-text">Who cares😂</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@16bitrelaxing" target="_blank" rel="noopener">16Bit Music</a></div>
-          <div class="comment-text">which</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@16bitrelaxing" target="_blank" rel="noopener">16Bit Music</a></div>
+          <div class="reply-text">which</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -772,21 +808,23 @@
     <div class="comment-text">I would do anything for you</div>
     <div class="comment-meta">
       <span>1 likes</span>
-      <span>2 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@shopvixiani" target="_blank" rel="noopener">vixiani</a></div>
-          <div class="comment-text">[Sticker] </div>
-          <div class="comment-meta"><span>13 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 2 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@shopvixiani" target="_blank" rel="noopener">vixiani</a></div>
+          <div class="reply-text">[Sticker] </div>
+          <div class="reply-meta"><span>13 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@utkozet" target="_blank" rel="noopener">utkozet</a></div>
-          <div class="comment-text">[Sticker] </div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@utkozet" target="_blank" rel="noopener">utkozet</a></div>
+          <div class="reply-text">[Sticker] </div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -798,14 +836,15 @@
     <div class="comment-text">YOOOHOOOO😭😭😭</div>
     <div class="comment-meta">
       <span>1 likes</span>
-      <span>1 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@user17bkapf0qy" target="_blank" rel="noopener">⃟</a></div>
-          <div class="comment-text"></div>
-          <div class="comment-meta"><span>0 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 1 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@user17bkapf0qy" target="_blank" rel="noopener">⃟</a></div>
+          <div class="reply-text"></div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -817,8 +856,8 @@
     <div class="comment-text">🫠👌🔥💣🐚</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -829,8 +868,8 @@
     <div class="comment-text">🥰</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -841,8 +880,8 @@
     <div class="comment-text">🔥🔥🔥</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -853,14 +892,15 @@
     <div class="comment-text">I notice that far right influencers who are female always make pdf alligned content</div>
     <div class="comment-meta">
       <span>4 likes</span>
-      <span>1 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@smeasypeasy" target="_blank" rel="noopener">lily</a></div>
-          <div class="comment-text">makes sense, they have the same audience</div>
-          <div class="comment-meta"><span>1 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 1 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@smeasypeasy" target="_blank" rel="noopener">lily</a></div>
+          <div class="reply-text">makes sense, they have the same audience</div>
+          <div class="reply-meta"><span>1 likes</span></div>
         </div>
       </div></div>
   </div>

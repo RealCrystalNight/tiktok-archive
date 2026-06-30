@@ -86,6 +86,10 @@
     <div class="player-overlay" id="playerOverlay">
       <svg class="play-icon" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
     </div>
+    <button class="unmute-top" id="unmuteTop" title="Click to unmute">
+      <svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+      <span>Unmute</span>
+    </button>
     <div class="player-controls" id="playerControls">
       <div class="progress-bar" id="progressBar"><div class="progress-fill" id="progressFill"></div></div>
       <div class="controls-row">
@@ -152,148 +156,168 @@
     <div class="comment-text">Steam ruined another gem ):</div>
     <div class="comment-meta">
       <span>155 likes</span>
-      <span>23 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@zen_in777" target="_blank" rel="noopener">zen_in777</a></div>
-          <div class="comment-text">you can just download the patch from the creator&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;s site to have the full game without missing on anything</div>
-          <div class="comment-meta"><span>103 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 23 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@zen_in777" target="_blank" rel="noopener">zen_in777</a></div>
+          <div class="reply-text">you can just download the patch from the creator&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;s site to have the full game without missing on anything</div>
+          <div class="reply-meta"><span>103 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@petnargam" target="_blank" rel="noopener">.</a></div>
-          <div class="comment-text">can u tell me wheres this creator site</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@petnargam" target="_blank" rel="noopener">.</a></div>
+          <div class="reply-text">can u tell me wheres this creator site</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@zen_in777" target="_blank" rel="noopener">zen_in777</a></div>
-          <div class="comment-text">Otakuplan, I think, something with Otaku in the name. you can just search up Otaku black souls patch, I think it will pop up</div>
-          <div class="comment-meta"><span>5 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@zen_in777" target="_blank" rel="noopener">zen_in777</a></div>
+          <div class="reply-text">Otakuplan, I think, something with Otaku in the name. you can just search up Otaku black souls patch, I think it will pop up</div>
+          <div class="reply-meta"><span>5 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@petnargam" target="_blank" rel="noopener">.</a></div>
-          <div class="comment-text">danke schön❤️</div>
-          <div class="comment-meta"><span>1 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@petnargam" target="_blank" rel="noopener">.</a></div>
+          <div class="reply-text">danke schön❤️</div>
+          <div class="reply-meta"><span>1 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@sond9r" target="_blank" rel="noopener">собака лана</a></div>
-          <div class="comment-text">saying &quot;gem&quot; while refering to black souls😭😭 its so over</div>
-          <div class="comment-meta"><span>50 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@sond9r" target="_blank" rel="noopener">собака лана</a></div>
+          <div class="reply-text">saying &quot;gem&quot; while refering to black souls😭😭 its so over</div>
+          <div class="reply-meta"><span>50 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@soldieroftheidff" target="_blank" rel="noopener">soldieroftheidff</a></div>
-          <div class="comment-text">What does the Patch change?</div>
-          <div class="comment-meta"><span>1 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@soldieroftheidff" target="_blank" rel="noopener">soldieroftheidff</a></div>
+          <div class="reply-text">What does the Patch change?</div>
+          <div class="reply-meta"><span>1 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@canthinkyy" target="_blank" rel="noopener">canthinky</a></div>
-          <div class="comment-text">it adds back all scenes</div>
-          <div class="comment-meta"><span>1 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@canthinkyy" target="_blank" rel="noopener">canthinky</a></div>
+          <div class="reply-text">it adds back all scenes</div>
+          <div class="reply-meta"><span>1 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@soldieroftheidff" target="_blank" rel="noopener">soldieroftheidff</a></div>
-          <div class="comment-text">Nsfw?</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@soldieroftheidff" target="_blank" rel="noopener">soldieroftheidff</a></div>
+          <div class="reply-text">Nsfw?</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@canthinkyy" target="_blank" rel="noopener">canthinky</a></div>
-          <div class="comment-text">yeah but it’s important to the story</div>
-          <div class="comment-meta"><span>4 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@canthinkyy" target="_blank" rel="noopener">canthinky</a></div>
+          <div class="reply-text">yeah but it’s important to the story</div>
+          <div class="reply-meta"><span>4 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@sond9r" target="_blank" rel="noopener">собака лана</a></div>
-          <div class="comment-text">there&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;s like 2 or 3 scenes that are actually important to the story</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@sond9r" target="_blank" rel="noopener">собака лана</a></div>
+          <div class="reply-text">there&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;s like 2 or 3 scenes that are actually important to the story</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@necrowizardfan" target="_blank" rel="noopener">necrowizardfan</a></div>
-          <div class="comment-text">Tell me you’ve played the game without telling me you’ve played the name (new gen spotted</div>
-          <div class="comment-meta"><span>5 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@necrowizardfan" target="_blank" rel="noopener">necrowizardfan</a></div>
+          <div class="reply-text">Tell me you’ve played the game without telling me you’ve played the name (new gen spotted</div>
+          <div class="reply-meta"><span>5 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@sond9r" target="_blank" rel="noopener">собака лана</a></div>
-          <div class="comment-text">my first black souls playthrough was more than 2 years ago, i played both games and got all endings and haven&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;t touched this game since🫩 it&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;s objectively a bad game, not mentioning the fact that it&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;s problematic. some of yall hate funger because miro was inspired by some other media while making his game, but black souls has zero individuality. not only it&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;s lore is stolen (and really boring) but 99% of the assets and music aren&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;t original, nothing in this game is actually original or interesting. please tell me what part of black souls lore I&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;m missing if i never 🍇ed my chick daughter and haven&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;t seen the scene</div>
-          <div class="comment-meta"><span>1 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@sond9r" target="_blank" rel="noopener">собака лана</a></div>
+          <div class="reply-text">my first black souls playthrough was more than 2 years ago, i played both games and got all endings and haven&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;t touched this game since🫩 it&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;s objectively a bad game, not mentioning the fact that it&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;s problematic. some of yall hate funger because miro was inspired by some other media while making his game, but black souls has zero individuality. not only it&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;s lore is stolen (and really boring) but 99% of the assets and music aren&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;t original, nothing in this game is actually original or interesting. please tell me what part of black souls lore I&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;m missing if i never 🍇ed my chick daughter and haven&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;t seen the scene</div>
+          <div class="reply-meta"><span>1 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@necrowizardfan" target="_blank" rel="noopener">necrowizardfan</a></div>
-          <div class="comment-text">First time I touched black souls was in 2017 when you had to get it thru fishy sites</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@necrowizardfan" target="_blank" rel="noopener">necrowizardfan</a></div>
+          <div class="reply-text">First time I touched black souls was in 2017 when you had to get it thru fishy sites</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@necrowizardfan" target="_blank" rel="noopener">necrowizardfan</a></div>
-          <div class="comment-text">You watching a YouTube video doesn’t count as you playing</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@necrowizardfan" target="_blank" rel="noopener">necrowizardfan</a></div>
+          <div class="reply-text">You watching a YouTube video doesn’t count as you playing</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@sond9r" target="_blank" rel="noopener">собака лана</a></div>
-          <div class="comment-text">black souls in 2017 was only available in japanese, there&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;s no way you saw a crappy japanese rpg maker slop with stolen assets and horrible art and thought that this game is worth your time😭😭😭 you&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;re posing as an oldgen and still admitting that you&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;re a pirate btw
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@sond9r" target="_blank" rel="noopener">собака лана</a></div>
+          <div class="reply-text">black souls in 2017 was only available in japanese, there&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;s no way you saw a crappy japanese rpg maker slop with stolen assets and horrible art and thought that this game is worth your time😭😭😭 you&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;re posing as an oldgen and still admitting that you&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;re a pirate btw
 the game was only available either on fishy sites sites or it could have been purchased personally from the creator until it got published on steam, so what&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;s even the purpose of adding it to your comment</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@necrowizardfan" target="_blank" rel="noopener">necrowizardfan</a></div>
-          <div class="comment-text">Trust me there were sites you could download</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@necrowizardfan" target="_blank" rel="noopener">necrowizardfan</a></div>
+          <div class="reply-text">Trust me there were sites you could download</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@sond9r" target="_blank" rel="noopener">собака лана</a></div>
-          <div class="comment-text">i wasn&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;t even arguing with that, i literally got the game at a russian h3nt41 site that can only be accessed with vpn</div>
-          <div class="comment-meta"><span>2 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@sond9r" target="_blank" rel="noopener">собака лана</a></div>
+          <div class="reply-text">i wasn&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;t even arguing with that, i literally got the game at a russian h3nt41 site that can only be accessed with vpn</div>
+          <div class="reply-meta"><span>2 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@vikarusameli" target="_blank" rel="noopener">Vikarus Ameli</a></div>
-          <div class="comment-text">Это ложь, они все важны</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@vikarusameli" target="_blank" rel="noopener">Vikarus Ameli</a></div>
+          <div class="reply-text">Это ложь, они все важны</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@sond9r" target="_blank" rel="noopener">собака лана</a></div>
-          <div class="comment-text">какую ценность для общего сюжета несёт 🍇 рандомного маленького мальчика?</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@sond9r" target="_blank" rel="noopener">собака лана</a></div>
+          <div class="reply-text">какую ценность для общего сюжета несёт 🍇 рандомного маленького мальчика?</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@.toryu" target="_blank" rel="noopener">tory</a></div>
-          <div class="comment-text">black souls is peak</div>
-          <div class="comment-meta"><span>1 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@.toryu" target="_blank" rel="noopener">tory</a></div>
+          <div class="reply-text">black souls is peak</div>
+          <div class="reply-meta"><span>1 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -305,35 +329,39 @@ the game was only available either on fishy sites sites or it could have been pu
     <div class="comment-text">Where u get that coat 😱</div>
     <div class="comment-meta">
       <span>11 likes</span>
-      <span>4 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@canthinkyy" target="_blank" rel="noopener">canthinky</a></div>
-          <div class="comment-text">i made it!</div>
-          <div class="comment-meta"><span>23 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 4 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@canthinkyy" target="_blank" rel="noopener">canthinky</a></div>
+          <div class="reply-text">i made it!</div>
+          <div class="reply-meta"><span>23 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@lilsleepyamnesia" target="_blank" rel="noopener">Kitten 🖤</a></div>
-          <div class="comment-text">Omg it’s adorable</div>
-          <div class="comment-meta"><span>1 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@lilsleepyamnesia" target="_blank" rel="noopener">Kitten 🖤</a></div>
+          <div class="reply-text">Omg it’s adorable</div>
+          <div class="reply-meta"><span>1 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@lryukazen.l" target="_blank" rel="noopener">xxyph</a></div>
-          <div class="comment-text">You should make more and sell them; I would definitely buy them all</div>
-          <div class="comment-meta"><span>1 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@lryukazen.l" target="_blank" rel="noopener">xxyph</a></div>
+          <div class="reply-text">You should make more and sell them; I would definitely buy them all</div>
+          <div class="reply-meta"><span>1 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@juszyr" target="_blank" rel="noopener">juszyr</a></div>
-          <div class="comment-text">pretty sure she made it</div>
-          <div class="comment-meta"><span>1 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@juszyr" target="_blank" rel="noopener">juszyr</a></div>
+          <div class="reply-text">pretty sure she made it</div>
+          <div class="reply-meta"><span>1 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -345,14 +373,15 @@ the game was only available either on fishy sites sites or it could have been pu
     <div class="comment-text">I’m literally grimm</div>
     <div class="comment-meta">
       <span>4 likes</span>
-      <span>1 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@pdovix.iv" target="_blank" rel="noopener">xivodp</a></div>
-          <div class="comment-text">no i am</div>
-          <div class="comment-meta"><span>1 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 1 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@pdovix.iv" target="_blank" rel="noopener">xivodp</a></div>
+          <div class="reply-text">no i am</div>
+          <div class="reply-meta"><span>1 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -364,133 +393,151 @@ the game was only available either on fishy sites sites or it could have been pu
     <div class="comment-text">а ведь я фембойчик</div>
     <div class="comment-meta">
       <span>642 likes</span>
-      <span>19 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@notrealsetar" target="_blank" rel="noopener">NotRealSETAR</a></div>
-          <div class="comment-text"></div>
-          <div class="comment-meta"><span>77 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 19 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@notrealsetar" target="_blank" rel="noopener">NotRealSETAR</a></div>
+          <div class="reply-text"></div>
+          <div class="reply-meta"><span>77 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@_znoiny" target="_blank" rel="noopener">better_call_konata</a></div>
-          <div class="comment-text"><a href="https://www.tiktok.com/@убан" target="_blank" rel="noopener">@убан</a></div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@_znoiny" target="_blank" rel="noopener">better_call_konata</a></div>
+          <div class="reply-text"><a href="https://www.tiktok.com/@убан" target="_blank" rel="noopener">@убан</a></div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@v3rt0p" target="_blank" rel="noopener">v3rt0p</a></div>
-          <div class="comment-text">[Sticker] </div>
-          <div class="comment-meta"><span>43 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@v3rt0p" target="_blank" rel="noopener">v3rt0p</a></div>
+          <div class="reply-text">[Sticker] </div>
+          <div class="reply-meta"><span>43 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@sebastian.zhoski" target="_blank" rel="noopener">Going Postal</a></div>
-          <div class="comment-text"></div>
-          <div class="comment-meta"><span>5 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@sebastian.zhoski" target="_blank" rel="noopener">Going Postal</a></div>
+          <div class="reply-text"></div>
+          <div class="reply-meta"><span>5 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@y2flamty" target="_blank" rel="noopener">🥰</a></div>
-          <div class="comment-text">о я тоже</div>
-          <div class="comment-meta"><span>2 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@y2flamty" target="_blank" rel="noopener">🥰</a></div>
+          <div class="reply-text">о я тоже</div>
+          <div class="reply-meta"><span>2 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@notrealsetar" target="_blank" rel="noopener">NotRealSETAR</a></div>
-          <div class="comment-text">Ты реально фембой??? ЧЕГО 🤯</div>
-          <div class="comment-meta"><span>2 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@notrealsetar" target="_blank" rel="noopener">NotRealSETAR</a></div>
+          <div class="reply-text">Ты реально фембой??? ЧЕГО 🤯</div>
+          <div class="reply-meta"><span>2 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@slowlykit" target="_blank" rel="noopener">N O v a x</a></div>
-          <div class="comment-text">так даже лучше</div>
-          <div class="comment-meta"><span>1 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@slowlykit" target="_blank" rel="noopener">N O v a x</a></div>
+          <div class="reply-text">так даже лучше</div>
+          <div class="reply-meta"><span>1 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@manulchek_official" target="_blank" rel="noopener">манулич</a></div>
-          <div class="comment-text">джекпот</div>
-          <div class="comment-meta"><span>1 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@manulchek_official" target="_blank" rel="noopener">манулич</a></div>
+          <div class="reply-text">джекпот</div>
+          <div class="reply-meta"><span>1 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@user5259810502695" target="_blank" rel="noopener">кынгыр мен</a></div>
-          <div class="comment-text">а можно на билли</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@user5259810502695" target="_blank" rel="noopener">кынгыр мен</a></div>
+          <div class="reply-text">а можно на билли</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@wermorq" target="_blank" rel="noopener">the penitent one.</a></div>
-          <div class="comment-text">Средний пользователь с25у (я такой же).</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@wermorq" target="_blank" rel="noopener">the penitent one.</a></div>
+          <div class="reply-text">Средний пользователь с25у (я такой же).</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@artemrykk" target="_blank" rel="noopener">Steel ball lover</a></div>
-          <div class="comment-text"></div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@artemrykk" target="_blank" rel="noopener">Steel ball lover</a></div>
+          <div class="reply-text"></div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@wifjskeleton" target="_blank" rel="noopener">ааабляяяче</a></div>
-          <div class="comment-text">билла.надо было.</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@wifjskeleton" target="_blank" rel="noopener">ааабляяяче</a></div>
+          <div class="reply-text">билла.надо было.</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@dresscodessj" target="_blank" rel="noopener">Leichenwetter</a></div>
-          <div class="comment-text">легенда брат</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@dresscodessj" target="_blank" rel="noopener">Leichenwetter</a></div>
+          <div class="reply-text">легенда брат</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@.z.alupa" target="_blank" rel="noopener">🇮🇱Неразвиваемый(Emperor)🇺🇲</a></div>
-          <div class="comment-text">а где купил?</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@.z.alupa" target="_blank" rel="noopener">🇮🇱Неразвиваемый(Emperor)🇺🇲</a></div>
+          <div class="reply-text">а где купил?</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@usoby_off" target="_blank" rel="noopener">ТГК: блог Usoby 🏳️‍⚧️</a></div>
-          <div class="comment-text">сам сделал 😁</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@usoby_off" target="_blank" rel="noopener">ТГК: блог Usoby 🏳️‍⚧️</a></div>
+          <div class="reply-text">сам сделал 😁</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@illy.miron" target="_blank" rel="noopener">Illy Miron</a></div>
-          <div class="comment-text"></div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@illy.miron" target="_blank" rel="noopener">Illy Miron</a></div>
+          <div class="reply-text"></div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@kexit123" target="_blank" rel="noopener">Гуара</a></div>
-          <div class="comment-text"><a href="https://www.tiktok.com/@Lovecraft" target="_blank" rel="noopener">@Lovecraft</a></div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@kexit123" target="_blank" rel="noopener">Гуара</a></div>
+          <div class="reply-text"><a href="https://www.tiktok.com/@Lovecraft" target="_blank" rel="noopener">@Lovecraft</a></div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@p0xrrw" target="_blank" rel="noopener">♱</a></div>
-          <div class="comment-text"><a href="https://www.tiktok.com/@Debat" target="_blank" rel="noopener">@Debat</a></div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@p0xrrw" target="_blank" rel="noopener">♱</a></div>
+          <div class="reply-text"><a href="https://www.tiktok.com/@Debat" target="_blank" rel="noopener">@Debat</a></div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -502,28 +549,31 @@ the game was only available either on fishy sites sites or it could have been pu
     <div class="comment-text">Did you make the cosplay or you bought it??</div>
     <div class="comment-meta">
       <span>2 likes</span>
-      <span>3 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@canthinkyy" target="_blank" rel="noopener">canthinky</a></div>
-          <div class="comment-text">made it!</div>
-          <div class="comment-meta"><span>6 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 3 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@canthinkyy" target="_blank" rel="noopener">canthinky</a></div>
+          <div class="reply-text">made it!</div>
+          <div class="reply-meta"><span>6 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@viottiz" target="_blank" rel="noopener">ViottiZ</a></div>
-          <div class="comment-text">Woooo, thats so cool, i was going to ask for the link but i think i just need to get good and start learning how to sew</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@viottiz" target="_blank" rel="noopener">ViottiZ</a></div>
+          <div class="reply-text">Woooo, thats so cool, i was going to ask for the link but i think i just need to get good and start learning how to sew</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@christiangarzonsi" target="_blank" rel="noopener">christiangarzonsi</a></div>
-          <div class="comment-text">impressive!</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@christiangarzonsi" target="_blank" rel="noopener">christiangarzonsi</a></div>
+          <div class="reply-text">impressive!</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -535,21 +585,23 @@ the game was only available either on fishy sites sites or it could have been pu
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>458 likes</span>
-      <span>2 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@hopeeee040" target="_blank" rel="noopener">Hope</a></div>
-          <div class="comment-text"></div>
-          <div class="comment-meta"><span>6 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 2 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@hopeeee040" target="_blank" rel="noopener">Hope</a></div>
+          <div class="reply-text"></div>
+          <div class="reply-meta"><span>6 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@notbedboy2" target="_blank" rel="noopener">𝕹𝖔𝖙𝕭𝖊𝕯𝖇𝖔𝖄</a></div>
-          <div class="comment-text"></div>
-          <div class="comment-meta"><span>2 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@notbedboy2" target="_blank" rel="noopener">𝕹𝖔𝖙𝕭𝖊𝕯𝖇𝖔𝖄</a></div>
+          <div class="reply-text"></div>
+          <div class="reply-meta"><span>2 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -561,8 +613,8 @@ the game was only available either on fishy sites sites or it could have been pu
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>1.8K likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -573,50 +625,56 @@ the game was only available either on fishy sites sites or it could have been pu
     <div class="comment-text">No puedo ver a red hood igual luego de jugar Red Hood Woods</div>
     <div class="comment-meta">
       <span>34 likes</span>
-      <span>6 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@el.de.los.onais" target="_blank" rel="noopener">pene</a></div>
-          <div class="comment-text">porque w</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 6 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@el.de.los.onais" target="_blank" rel="noopener">pene</a></div>
+          <div class="reply-text">porque w</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@the_abstract_0" target="_blank" rel="noopener">The Abstract</a></div>
-          <div class="comment-text">Pura zoofilia</div>
-          <div class="comment-meta"><span>1 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@the_abstract_0" target="_blank" rel="noopener">The Abstract</a></div>
+          <div class="reply-text">Pura zoofilia</div>
+          <div class="reply-meta"><span>1 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@vile_87" target="_blank" rel="noopener">¥Vile¥</a></div>
-          <div class="comment-text">No hermano 😔</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@vile_87" target="_blank" rel="noopener">¥Vile¥</a></div>
+          <div class="reply-text">No hermano 😔</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@grimm_bks" target="_blank" rel="noopener">Grimm 🕯️ Empanadas</a></div>
-          <div class="comment-text">básicamente es la precuela de black soul que es la historia de Caperucita roja si no estoy mal</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@grimm_bks" target="_blank" rel="noopener">Grimm 🕯️ Empanadas</a></div>
+          <div class="reply-text">básicamente es la precuela de black soul que es la historia de Caperucita roja si no estoy mal</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@grimm_bks" target="_blank" rel="noopener">Grimm 🕯️ Empanadas</a></div>
-          <div class="comment-text">real</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@grimm_bks" target="_blank" rel="noopener">Grimm 🕯️ Empanadas</a></div>
+          <div class="reply-text">real</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@pollo_fr6" target="_blank" rel="noopener">pollo_fr6</a></div>
-          <div class="comment-text">si no recuerdo mal el abuelo 4bus4b4 de ella luego m4t0 al abuelo y se lo dio
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@pollo_fr6" target="_blank" rel="noopener">pollo_fr6</a></div>
+          <div class="reply-text">si no recuerdo mal el abuelo 4bus4b4 de ella luego m4t0 al abuelo y se lo dio
 al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 a la buena y la abuela se convierte en la mamá de caperusita en black souls 1</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -628,42 +686,47 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>95 likes</span>
-      <span>6 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@yosoylabebida" target="_blank" rel="noopener">y mi padre es el vaso</a></div>
-          <div class="comment-text">[Sticker] </div>
-          <div class="comment-meta"><span>13 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 6 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@yosoylabebida" target="_blank" rel="noopener">y mi padre es el vaso</a></div>
+          <div class="reply-text">[Sticker] </div>
+          <div class="reply-meta"><span>13 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@benso20003" target="_blank" rel="noopener">Benson</a></div>
-          <div class="comment-text">[Sticker] </div>
-          <div class="comment-meta"><span>6 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@benso20003" target="_blank" rel="noopener">Benson</a></div>
+          <div class="reply-text">[Sticker] </div>
+          <div class="reply-meta"><span>6 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@badapple114514" target="_blank" rel="noopener">多分アイコンで反省する人</a></div>
-          <div class="comment-text"></div>
-          <div class="comment-meta"><span>2 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@badapple114514" target="_blank" rel="noopener">多分アイコンで反省する人</a></div>
+          <div class="reply-text"></div>
+          <div class="reply-meta"><span>2 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@zzzxddddf" target="_blank" rel="noopener">.</a></div>
-          <div class="comment-text"></div>
-          <div class="comment-meta"><span>6 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@zzzxddddf" target="_blank" rel="noopener">.</a></div>
+          <div class="reply-text"></div>
+          <div class="reply-meta"><span>6 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@meangaocansa" target="_blank" rel="noopener">￴ ￴ ￴ ￴ ￴ ￴ ￴ ￴ ￴￴ ￴ ￴ ￴ ￴ ￴</a></div>
-          <div class="comment-text">[Sticker] </div>
-          <div class="comment-meta"><span>1 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@meangaocansa" target="_blank" rel="noopener">￴ ￴ ￴ ￴ ￴ ￴ ￴ ￴ ￴￴ ￴ ￴ ￴ ￴ ￴</a></div>
+          <div class="reply-text">[Sticker] </div>
+          <div class="reply-meta"><span>1 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -675,14 +738,15 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text">Black souls arruinó mi estabilidad mental</div>
     <div class="comment-meta">
       <span>8 likes</span>
-      <span>1 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@charlotte_grimm0" target="_blank" rel="noopener">Elma Match Seller</a></div>
-          <div class="comment-text">A quién no?</div>
-          <div class="comment-meta"><span>1 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 1 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@charlotte_grimm0" target="_blank" rel="noopener">Elma Match Seller</a></div>
+          <div class="reply-text">A quién no?</div>
+          <div class="reply-meta"><span>1 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -694,14 +758,15 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text">no es fiel al personaje 😝</div>
     <div class="comment-meta">
       <span>1 likes</span>
-      <span>1 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@gasster16" target="_blank" rel="noopener">gasster16</a></div>
-          <div class="comment-text">porque esta muy alta 😎</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 1 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@gasster16" target="_blank" rel="noopener">gasster16</a></div>
+          <div class="reply-text">porque esta muy alta 😎</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -713,21 +778,23 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text">Схаваю любой контент по блэк соулс</div>
     <div class="comment-meta">
       <span>4 likes</span>
-      <span>2 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@lokneim1" target="_blank" rel="noopener">українець</a></div>
-          <div class="comment-text"></div>
-          <div class="comment-meta"><span>0 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 2 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@lokneim1" target="_blank" rel="noopener">українець</a></div>
+          <div class="reply-text"></div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@forzend1" target="_blank" rel="noopener">Forzend:)</a></div>
-          <div class="comment-text"></div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@forzend1" target="_blank" rel="noopener">Forzend:)</a></div>
+          <div class="reply-text"></div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -739,8 +806,8 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>81 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -751,21 +818,23 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>6 likes</span>
-      <span>2 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@catze_k" target="_blank" rel="noopener">Catze</a></div>
-          <div class="comment-text"></div>
-          <div class="comment-meta"><span>3 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 2 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@catze_k" target="_blank" rel="noopener">Catze</a></div>
+          <div class="reply-text"></div>
+          <div class="reply-meta"><span>3 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@catze_k" target="_blank" rel="noopener">Catze</a></div>
-          <div class="comment-text"></div>
-          <div class="comment-meta"><span>2 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@catze_k" target="_blank" rel="noopener">Catze</a></div>
+          <div class="reply-text"></div>
+          <div class="reply-meta"><span>2 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -777,14 +846,15 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>121 likes</span>
-      <span>1 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@beggar_art" target="_blank" rel="noopener">Beggar</a></div>
-          <div class="comment-text">fr bro</div>
-          <div class="comment-meta"><span>1 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 1 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@beggar_art" target="_blank" rel="noopener">Beggar</a></div>
+          <div class="reply-text">fr bro</div>
+          <div class="reply-meta"><span>1 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -796,21 +866,23 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text">с этой музыкой у меня только один ассоциируется</div>
     <div class="comment-meta">
       <span>68 likes</span>
-      <span>2 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@zxcitler" target="_blank" rel="noopener">Coccyx</a></div>
-          <div class="comment-text">[Sticker] </div>
-          <div class="comment-meta"><span>3 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 2 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@zxcitler" target="_blank" rel="noopener">Coccyx</a></div>
+          <div class="reply-text">[Sticker] </div>
+          <div class="reply-meta"><span>3 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@dkdkdnebz" target="_blank" rel="noopener">dkdevwc</a></div>
-          <div class="comment-text">костюм не какно</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@dkdkdnebz" target="_blank" rel="noopener">dkdevwc</a></div>
+          <div class="reply-text">костюм не какно</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -822,8 +894,8 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>70 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -834,8 +906,8 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text">grimm 😌</div>
     <div class="comment-meta">
       <span>3 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -846,8 +918,8 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>12 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -858,8 +930,8 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text">[Sticker] yoo,this peaak❤️❤️</div>
     <div class="comment-meta">
       <span>9 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -870,8 +942,8 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>3 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -882,8 +954,8 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -894,8 +966,8 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text">The coat acc looks phenomenal</div>
     <div class="comment-meta">
       <span>1 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -906,8 +978,8 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>8 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -918,8 +990,8 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>2 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -930,8 +1002,8 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>2 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -942,8 +1014,8 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>1 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -954,8 +1026,8 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text">how to make a coat like this 😭😭</div>
     <div class="comment-meta">
       <span>1 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -966,8 +1038,8 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>2 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -978,8 +1050,8 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text">The cosplay It’s really Good, you are very talented🔥🔥</div>
     <div class="comment-meta">
       <span>3 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -990,8 +1062,8 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text">Обожаю</div>
     <div class="comment-meta">
       <span>8 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -1002,8 +1074,8 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>6 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -1014,8 +1086,8 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text">name 5 bs2 bosses</div>
     <div class="comment-meta">
       <span>2 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -1026,8 +1098,8 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -1038,8 +1110,8 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -1050,8 +1122,8 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text">black souls becoming mainstream</div>
     <div class="comment-meta">
       <span>4 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -1062,8 +1134,8 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>3 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -1074,8 +1146,8 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>3 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -1086,8 +1158,8 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text">I am going to Alice</div>
     <div class="comment-meta">
       <span>4 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -1098,8 +1170,8 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>1 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -1110,8 +1182,8 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text">Where did you get the clothes for this?</div>
     <div class="comment-meta">
       <span>4 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -1122,8 +1194,8 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>2 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -1134,8 +1206,8 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>1 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -1146,8 +1218,8 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>2 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -1158,8 +1230,8 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text">😛</div>
     <div class="comment-meta">
       <span>1 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -1170,8 +1242,8 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text">OMG REDHOOD</div>
     <div class="comment-meta">
       <span>3 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -1182,8 +1254,8 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>1 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -1194,8 +1266,8 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text">Шапка mentioned</div>
     <div class="comment-meta">
       <span>4 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -1206,8 +1278,8 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>2 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -1218,8 +1290,8 @@ al lobo luego la abuela al interarse intenta acabar con su nieta pero esta m4t4 
     <div class="comment-text">red hood vibing with my own song now</div>
     <div class="comment-meta">
       <span>2 likes</span>
-      
     </div>
+    
     
   </div>
 </div>

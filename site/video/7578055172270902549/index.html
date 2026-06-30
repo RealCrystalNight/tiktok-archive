@@ -86,6 +86,10 @@
     <div class="player-overlay" id="playerOverlay">
       <svg class="play-icon" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
     </div>
+    <button class="unmute-top" id="unmuteTop" title="Click to unmute">
+      <svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+      <span>Unmute</span>
+    </button>
     <div class="player-controls" id="playerControls">
       <div class="progress-bar" id="progressBar"><div class="progress-fill" id="progressFill"></div></div>
       <div class="controls-row">
@@ -152,21 +156,23 @@
     <div class="comment-text">THE peak lain cos (where did u get the wig if u don’t mind me asking)</div>
     <div class="comment-meta">
       <span>1 likes</span>
-      <span>2 replies</span>
     </div>
-    <div class="replies">
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@canthinkyy" target="_blank" rel="noopener">canthinky</a></div>
-          <div class="comment-text">it was a dva wig i just cut it</div>
-          <div class="comment-meta"><span>1 likes</span></div>
+    <button class="view-replies-btn" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">View all 2 replies</button>
+    <div class="replies" style="display:none">
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@canthinkyy" target="_blank" rel="noopener">canthinky</a></div>
+          <div class="reply-text">it was a dva wig i just cut it</div>
+          <div class="reply-meta"><span>1 likes</span></div>
         </div>
       </div>
-      <div class="comment reply">
-        <div class="comment-body">
-          <div class="comment-author"><a href="https://www.tiktok.com/@internet_scara" target="_blank" rel="noopener">‹    ✦ 𓏻  𝐾̲𝑎̲𝑖̲  ’ ◟ ♱</a></div>
-          <div class="comment-text">ohh okayy thanks !!</div>
-          <div class="comment-meta"><span>0 likes</span></div>
+      <div class="reply">
+        <div class="reply-avatar" style="background:#333"></div>
+        <div class="reply-body">
+          <div class="reply-author"><a href="https://www.tiktok.com/@internet_scara" target="_blank" rel="noopener">‹    ✦ 𓏻  𝐾̲𝑎̲𝑖̲  ’ ◟ ♱</a></div>
+          <div class="reply-text">ohh okayy thanks !!</div>
+          <div class="reply-meta"><span>0 likes</span></div>
         </div>
       </div></div>
   </div>
@@ -178,8 +184,8 @@
     <div class="comment-text">THE lain cosplay</div>
     <div class="comment-meta">
       <span>23 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -190,8 +196,8 @@
     <div class="comment-text">Lets all love lain</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -202,8 +208,8 @@
     <div class="comment-text">one of the best lain cosplays btw 🫣</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -214,8 +220,8 @@
     <div class="comment-text">Let&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;s all love lain</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -226,8 +232,8 @@
     <div class="comment-text">10/10 congratz</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -238,8 +244,8 @@
     <div class="comment-text">the background visuals always add so much to ur videos I loves it</div>
     <div class="comment-meta">
       <span>2 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -250,8 +256,8 @@
     <div class="comment-text">[Sticker] goated costplay</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -262,8 +268,8 @@
     <div class="comment-text">lain Is ...</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -274,8 +280,8 @@
     <div class="comment-text">fire fit💯</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -286,8 +292,8 @@
     <div class="comment-text">This is so awesome🥹</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -298,8 +304,8 @@
     <div class="comment-text">let&<a href="https://www.tiktok.com/tag/x27" target="_blank" rel="noopener">#x27</a>;s all love lain</div>
     <div class="comment-meta">
       <span>1 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -310,8 +316,8 @@
     <div class="comment-text">perfect</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -322,8 +328,8 @@
     <div class="comment-text">[Sticker] </div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -334,8 +340,8 @@
     <div class="comment-text">Вау</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -346,8 +352,8 @@
     <div class="comment-text">Kay lain, rara combinación</div>
     <div class="comment-meta">
       <span>1 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -358,8 +364,8 @@
     <div class="comment-text">Let’s all love lain</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -370,8 +376,8 @@
     <div class="comment-text">Let’s all love Lain</div>
     <div class="comment-meta">
       <span>2 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -382,8 +388,8 @@
     <div class="comment-text">😍😍😍😍</div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
@@ -394,8 +400,8 @@
     <div class="comment-text"></div>
     <div class="comment-meta">
       <span>0 likes</span>
-      
     </div>
+    
     
   </div>
 </div>
