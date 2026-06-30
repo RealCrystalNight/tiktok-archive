@@ -582,6 +582,7 @@ def html_shell(title: str, desc: str, url: str, body: str, extra_head: str = "",
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{esc(title)}">
 <meta name="twitter:description" content="{esc(desc)}">
+<meta name="theme-color" content="#fe2c55">
 <link rel="canonical" href="{esc(url)}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -774,13 +775,30 @@ def build_video_page(video_data: dict):
         comments_html = '<p style="color:var(--text-muted);font-size:0.85rem">No comments archived for this video.</p>'
 
     # OG tags for video page (override generic ones from html_shell)
+    cover_cdn = f"{CDN_BASE}/covers/{vid}.jpeg"
     extra_head = f"""
 <meta property="og:type" content="video.other">
+<meta property="og:site_name" content="TikTok Archive">
+<meta property="og:title" content="{esc(title)} — @{esc(username)}">
+<meta property="og:description" content="{esc(desc[:200]) if desc else 'Archived TikTok video by @' + esc(username)}">
+<meta property="og:url" content="{esc(video_src_cdn)}">
+<meta property="og:image" content="{esc(cover_cdn)}">
+<meta property="og:image:width" content="720">
+<meta property="og:image:height" content="1280">
 <meta property="og:video" content="{esc(video_src_cdn)}">
+<meta property="og:video:url" content="{esc(video_src_cdn)}">
+<meta property="og:video:secure_url" content="{esc(video_src_cdn)}">
 <meta property="og:video:type" content="video/mp4">
-<meta property="og:image" content="{esc(thumb)}">
+<meta property="og:video:width" content="1080">
+<meta property="og:video:height" content="1920">
 <meta name="twitter:card" content="player">
+<meta name="twitter:site" content="@RealCrystalNight">
+<meta name="twitter:title" content="{esc(title)} — @{esc(username)}">
+<meta name="twitter:description" content="{esc(desc[:200]) if desc else 'Archived TikTok video'}">
 <meta name="twitter:player" content="{esc(video_src_cdn)}">
+<meta name="twitter:player:width" content="1080">
+<meta name="twitter:player:height" content="1920">
+<meta name="theme-color" content="#fe2c55">
 <script type="application/ld+json">
 {{
   "@context": "https://schema.org",
