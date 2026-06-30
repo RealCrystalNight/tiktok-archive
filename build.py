@@ -19,7 +19,7 @@ VIDEOS_DIR = SITE_DIR / "videos"
 COVERS_SRC = BASE_DIR / "covers"
 
 # --- CONFIG ---
-GITHUB_USER = "YOUR_USERNAME"  # Update with your GitHub username
+GITHUB_USER = "RealCrystalNight"
 REPO_NAME = "tiktok-archive"
 CDN_BASE = f"https://raw.githack.com/{GITHUB_USER}/{REPO_NAME}/main"
 
