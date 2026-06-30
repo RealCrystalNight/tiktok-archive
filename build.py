@@ -15,7 +15,7 @@ from datetime import datetime
 BASE_DIR = Path(__file__).parent
 DATA_DIR = BASE_DIR / "data"
 SITE_DIR = BASE_DIR / "site"
-VIDEOS_DIR = SITE_DIR / "videos"
+VIDEOS_DIR = BASE_DIR / "videos"
 COVERS_SRC = BASE_DIR / "covers"
 
 # --- CONFIG ---
@@ -713,7 +713,9 @@ a:hover { text-decoration: underline; }
 # JS
 # ============================================================
 JS = """\
-// TikTok-style video player + hover preview
+// TikTok-style video player + hover preview + next/prev scroll
+var videoList = [];
+
 document.addEventListener('DOMContentLoaded', function() {
   // === HOVER PREVIEW ON GRID CARDS ===
   document.querySelectorAll('.video-card').forEach(function(card) {
@@ -748,11 +750,38 @@ document.addEventListener('DOMContentLoaded', function() {
   var progressFill = document.getElementById('progressFill');
   var progressBar = document.getElementById('progressBar');
   var disk = document.querySelector('.music-disk');
+  var unmuteTop = document.getElementById('unmuteTop');
+
+  // Load video list from data attribute
+  var listEl = document.getElementById('videoListData');
+  if (listEl) videoList = JSON.parse(listEl.textContent);
 
   if (!video) return;
 
+  // Restore mute state from localStorage
+  var currentId = window.location.pathname.match(/\\/video\\/(\\d+)\\//);
+  currentId = currentId ? currentId[1] : null;
+  var wasUnmuted = currentId ? localStorage.getItem('tiktokArchiveUnmuted_' + currentId) === 'true' : false;
+
+  if (wasUnmuted) {
+    video.muted = false;
+    if (unmuteIcon) unmuteIcon.style.display = '';
+    if (muteIcon) muteIcon.style.display = 'none';
+    if (unmuteTop) unmuteTop.classList.add('hidden');
+  } else {
+    video.muted = true;
+  }
+
   function togglePlay() {
     if (video.paused) { video.play(); } else { video.pause(); }
+  }
+
+  function setMuted(muted) {
+    video.muted = muted;
+    if (unmuteIcon) unmuteIcon.style.display = muted ? 'none' : '';
+    if (muteIcon) muteIcon.style.display = muted ? '' : 'none';
+    if (unmuteTop) unmuteTop.classList.toggle('hidden', !muted);
+    if (currentId) localStorage.setItem('tiktokArchiveUnmuted_' + currentId, muted ? 'false' : 'true');
   }
 
   // Click overlay to play/pause
@@ -797,25 +826,19 @@ document.addEventListener('DOMContentLoaded', function() {
     if (disk) disk.classList.remove('spinning');
   });
 
-  // Mute/unmute
-  var unmuteTop = document.getElementById('unmuteTop');
+  // Mute/unmute via bottom button
   if (muteBtn) {
-    video.muted = true;
     muteBtn.addEventListener('click', function(e) {
       e.stopPropagation();
-      video.muted = !video.muted;
-      if (unmuteIcon) unmuteIcon.style.display = video.muted ? '' : 'none';
-      if (muteIcon) muteIcon.style.display = video.muted ? 'none' : '';
-      if (unmuteTop) unmuteTop.classList.toggle('hidden', !video.muted);
+      setMuted(!video.muted);
     });
   }
+
+  // Unmute via top-left button
   if (unmuteTop) {
     unmuteTop.addEventListener('click', function(e) {
       e.stopPropagation();
-      video.muted = false;
-      if (unmuteIcon) unmuteIcon.style.display = 'none';
-      if (muteIcon) muteIcon.style.display = '';
-      unmuteTop.classList.add('hidden');
+      setMuted(false);
     });
   }
 
@@ -842,9 +865,42 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Autoplay (muted by default for autoplay policy)
+  // === SCROLL TO NEXT/PREV VIDEO ===
+  var scrollTimeout;
+  var wheelAccum = 0;
+  var wheelDir = 0;
+
+  document.addEventListener('wheel', function(e) {
+    if (videoList.length < 2 || !currentId) return;
+
+    var idx = videoList.indexOf(currentId);
+    if (idx === -1) return;
+
+    var dir = e.deltaY > 0 ? 1 : -1;
+    if (dir !== wheelDir) {
+      wheelAccum = 0;
+      wheelDir = dir;
+    }
+    wheelAccum += Math.abs(e.deltaY);
+
+    if (wheelAccum > 300) {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(function() {
+        if (wheelDir > 0 && idx < videoList.length - 1) {
+          window.location.href = '../' + videoList[idx + 1] + '/';
+        } else if (wheelDir < 0 && idx > 0) {
+          window.location.href = '../' + videoList[idx - 1] + '/';
+        }
+        wheelAccum = 0;
+      }, 150);
+    }
+
+    clearTimeout(scrollTimeout + 1);
+    setTimeout(function() { wheelAccum = 0; }, 800);
+  });
+
+  // Autoplay
   video.play().catch(function() {
-    // Autoplay blocked, show overlay
     if (overlay) overlay.classList.remove('hidden');
   });
 });
@@ -1000,7 +1056,7 @@ def build_index():
     print(f"[+] Built index.html ({len(videos)} videos)")
 
 
-def build_video_page(video_data: dict):
+def build_video_page(video_data: dict, all_video_ids: list = None):
     """Build individual video page."""
     vid = video_data["id"]
     title = video_data.get("title", "Untitled")
@@ -1058,8 +1114,9 @@ def build_video_page(video_data: dict):
           <div class="reply-author"><a href="https://www.tiktok.com/@{esc(r.get('user',''))}" target="_blank" rel="noopener">{r_author}</a></div>
           <div class="reply-text">{r_text}</div>
           <div class="reply-meta"><span>{r_likes} likes</span></div>
-        </div>
-      </div>"""
+  </div>
+</div>
+<script id="videoListData" type="application/json">{json.dumps(all_video_ids or [])}</script>"""
 
         view_replies = ""
         if reply_count > 0 and replies_html:
@@ -1152,8 +1209,8 @@ def build_video_page(video_data: dict):
           <svg viewBox="0 0 24 24" fill="white" id="pauseIcon" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
         </button>
         <button class="ctrl-btn" id="muteBtn" title="Mute/Unmute">
-          <svg viewBox="0 0 24 24" fill="white" id="unmuteIcon"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
-          <svg viewBox="0 0 24 24" fill="white" id="muteIcon" style="display:none"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
+          <svg viewBox="0 0 24 24" fill="white" id="unmuteIcon" style="display:none"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+          <svg viewBox="0 0 24 24" fill="white" id="muteIcon"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
         </button>
         <a href="{esc(video_src_cdn)}" download class="ctrl-btn" title="Download" id="downloadBtn">
           <svg viewBox="0 0 24 24" fill="white"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
@@ -1279,6 +1336,8 @@ def main():
 
     # Build individual video pages
     data_files = sorted(DATA_DIR.glob("*.json"))
+    index = json.loads((DATA_DIR / "index.json").read_text()) if (DATA_DIR / "index.json").exists() else {}
+    all_ids = [v["id"] for v in index.get("videos", [])]
     video_count = 0
     for df in data_files:
         if df.name in ("index.json", "profile.json"):
@@ -1287,7 +1346,7 @@ def main():
             with open(df) as f:
                 vdata = json.load(f)
             if "id" in vdata:
-                build_video_page(vdata)
+                build_video_page(vdata, all_video_ids=all_ids)
                 video_count += 1
         except (json.JSONDecodeError, KeyError):
             continue

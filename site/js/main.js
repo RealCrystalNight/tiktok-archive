@@ -1,4 +1,6 @@
-// TikTok-style video player + hover preview
+// TikTok-style video player + hover preview + next/prev scroll
+var videoList = [];
+
 document.addEventListener('DOMContentLoaded', function() {
   // === HOVER PREVIEW ON GRID CARDS ===
   document.querySelectorAll('.video-card').forEach(function(card) {
@@ -33,11 +35,38 @@ document.addEventListener('DOMContentLoaded', function() {
   var progressFill = document.getElementById('progressFill');
   var progressBar = document.getElementById('progressBar');
   var disk = document.querySelector('.music-disk');
+  var unmuteTop = document.getElementById('unmuteTop');
+
+  // Load video list from data attribute
+  var listEl = document.getElementById('videoListData');
+  if (listEl) videoList = JSON.parse(listEl.textContent);
 
   if (!video) return;
 
+  // Restore mute state from localStorage
+  var currentId = window.location.pathname.match(/\/video\/(\d+)\//);
+  currentId = currentId ? currentId[1] : null;
+  var wasUnmuted = currentId ? localStorage.getItem('tiktokArchiveUnmuted_' + currentId) === 'true' : false;
+
+  if (wasUnmuted) {
+    video.muted = false;
+    if (unmuteIcon) unmuteIcon.style.display = '';
+    if (muteIcon) muteIcon.style.display = 'none';
+    if (unmuteTop) unmuteTop.classList.add('hidden');
+  } else {
+    video.muted = true;
+  }
+
   function togglePlay() {
     if (video.paused) { video.play(); } else { video.pause(); }
+  }
+
+  function setMuted(muted) {
+    video.muted = muted;
+    if (unmuteIcon) unmuteIcon.style.display = muted ? 'none' : '';
+    if (muteIcon) muteIcon.style.display = muted ? '' : 'none';
+    if (unmuteTop) unmuteTop.classList.toggle('hidden', !muted);
+    if (currentId) localStorage.setItem('tiktokArchiveUnmuted_' + currentId, muted ? 'false' : 'true');
   }
 
   // Click overlay to play/pause
@@ -82,25 +111,19 @@ document.addEventListener('DOMContentLoaded', function() {
     if (disk) disk.classList.remove('spinning');
   });
 
-  // Mute/unmute
-  var unmuteTop = document.getElementById('unmuteTop');
+  // Mute/unmute via bottom button
   if (muteBtn) {
-    video.muted = true;
     muteBtn.addEventListener('click', function(e) {
       e.stopPropagation();
-      video.muted = !video.muted;
-      if (unmuteIcon) unmuteIcon.style.display = video.muted ? '' : 'none';
-      if (muteIcon) muteIcon.style.display = video.muted ? 'none' : '';
-      if (unmuteTop) unmuteTop.classList.toggle('hidden', !video.muted);
+      setMuted(!video.muted);
     });
   }
+
+  // Unmute via top-left button
   if (unmuteTop) {
     unmuteTop.addEventListener('click', function(e) {
       e.stopPropagation();
-      video.muted = false;
-      if (unmuteIcon) unmuteIcon.style.display = 'none';
-      if (muteIcon) muteIcon.style.display = '';
-      unmuteTop.classList.add('hidden');
+      setMuted(false);
     });
   }
 
@@ -127,9 +150,42 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Autoplay (muted by default for autoplay policy)
+  // === SCROLL TO NEXT/PREV VIDEO ===
+  var scrollTimeout;
+  var wheelAccum = 0;
+  var wheelDir = 0;
+
+  document.addEventListener('wheel', function(e) {
+    if (videoList.length < 2 || !currentId) return;
+
+    var idx = videoList.indexOf(currentId);
+    if (idx === -1) return;
+
+    var dir = e.deltaY > 0 ? 1 : -1;
+    if (dir !== wheelDir) {
+      wheelAccum = 0;
+      wheelDir = dir;
+    }
+    wheelAccum += Math.abs(e.deltaY);
+
+    if (wheelAccum > 300) {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(function() {
+        if (wheelDir > 0 && idx < videoList.length - 1) {
+          window.location.href = '../' + videoList[idx + 1] + '/';
+        } else if (wheelDir < 0 && idx > 0) {
+          window.location.href = '../' + videoList[idx - 1] + '/';
+        }
+        wheelAccum = 0;
+      }, 150);
+    }
+
+    clearTimeout(scrollTimeout + 1);
+    setTimeout(function() { wheelAccum = 0; }, 800);
+  });
+
+  // Autoplay
   video.play().catch(function() {
-    // Autoplay blocked, show overlay
     if (overlay) overlay.classList.remove('hidden');
   });
 });
