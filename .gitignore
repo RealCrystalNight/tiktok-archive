@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# yt-dlp temp files
+*.part
+*.temp
+
+# Don't ignore videos or data - they are the archive
+!videos/
+!data/
+!site/
